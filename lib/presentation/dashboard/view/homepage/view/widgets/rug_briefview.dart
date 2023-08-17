@@ -1,15 +1,13 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:rug_demo/global/resource/app_colors.dart';
-import 'package:rug_demo/presentation/common_widgets/custom_scaffold_layout.dart';
 
 class RugBriefViewWidget extends StatelessWidget {
   final String name;
   final void Function() onTap;
   final int price;
   final double rating;
-  RugBriefViewWidget(
+  const RugBriefViewWidget(
       {super.key,
       required this.name,
       required this.price,
@@ -65,7 +63,7 @@ class RugBriefViewWidget extends StatelessWidget {
                             children: <InlineSpan>[
                               TextSpan(
                                 text: price.toString(),
-                                style: TextStyle(
+                                style: const TextStyle(
                                     fontSize: 20, fontWeight: FontWeight.bold),
                               ),
                             ],
@@ -73,7 +71,7 @@ class RugBriefViewWidget extends StatelessWidget {
                         ),
                         Row(
                           children: [
-                            Icon(
+                            const Icon(
                               Icons.star,
                               size: 15,
                               color: Colors.amber,
@@ -87,7 +85,7 @@ class RugBriefViewWidget extends StatelessWidget {
                 )
               ],
             ),
-            Positioned(
+            const Positioned(
                 left: 10,
                 top: 10,
                 child: Icon(
@@ -95,7 +93,7 @@ class RugBriefViewWidget extends StatelessWidget {
                   color: Colors.red,
                   size: 20,
                 )),
-            Positioned(
+            const Positioned(
                 right: 10,
                 top: 10,
                 child: CircleAvatar(

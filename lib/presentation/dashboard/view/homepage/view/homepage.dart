@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rug_demo/global/resource/app_dimensions.dart';
 import 'package:rug_demo/presentation/common_widgets/custom_scaffold_layout.dart';
 import 'package:rug_demo/presentation/common_widgets/custom_textfield.dart';
-import 'package:rug_demo/presentation/common_widgets/primary_button.dart';
-import 'package:rug_demo/presentation/homepage/view/widgets/rug_briefview.dart';
+import 'package:rug_demo/presentation/dashboard/view/homepage/view/widgets/rug_briefview.dart';
 
 class Homepage extends StatefulWidget {
   static const String routeName = '/homepage';
@@ -24,17 +23,17 @@ class _HomepageState extends State<Homepage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               normalSpacer,
-              _HeaderRow(),
+              const _HeaderRow(),
               normalSpacer,
               CustomTextField(
-                  suffixIcon: Icon(Icons.search),
-                  prefixIcon: Icon(Icons.filter_6_outlined),
+                  suffixIcon: const Icon(Icons.search),
+                  prefixIcon: const Icon(Icons.filter_6_outlined),
                   hintText: 'Search for products..',
                   textFieldController: searchController,
                   valueDidChange: (_) {},
                   onFocusChange: (_) {}),
               normalSpacer,
-              Text('Trending'),
+              const Text('Trending'),
               minimumSpacer,
               SizedBox(
                 height: MediaQuery.of(context).size.height / 1.6,
@@ -42,7 +41,7 @@ class _HomepageState extends State<Homepage> {
                     // physics: NeverScrollableScrollPhysics(),
                     itemCount: 10,
                     shrinkWrap: true,
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2),
                     itemBuilder: (BuildContext context, int index) {
                       return Padding(
@@ -66,7 +65,7 @@ class _HomepageState extends State<Homepage> {
 }
 
 class _HeaderRow extends StatelessWidget {
-  const _HeaderRow({super.key});
+  const _HeaderRow();
 
   @override
   Widget build(BuildContext context) {
@@ -77,13 +76,13 @@ class _HeaderRow extends StatelessWidget {
           onPressed: () {
             print("sidebar pressed");
           },
-          icon: Icon(Icons.sort),
+          icon: const Icon(Icons.sort),
         ),
         IconButton(
           onPressed: () {
             print("cart pressed");
           },
-          icon: Icon(Icons.shopping_cart),
+          icon: const Icon(Icons.shopping_cart),
         ),
       ],
     );

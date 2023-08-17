@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:rug_demo/global/resource/app_colors.dart';
-import 'package:rug_demo/presentation/common_widgets/custom_textfield.dart';
 import 'package:rug_demo/presentation/common_widgets/primary_button.dart';
 import 'package:rug_demo/presentation/dashboard/view/dashboard_screen.dart';
 import 'package:rug_demo/presentation/signup/view/signup_page.dart';
