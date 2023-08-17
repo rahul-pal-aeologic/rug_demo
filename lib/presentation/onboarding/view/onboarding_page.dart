@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:rug_demo/global/resource/app_colors.dart';
 import 'package:rug_demo/presentation/common_widgets/primary_button.dart';
+import 'package:rug_demo/presentation/dashboard/view/dashboard_screen.dart';
+import 'package:rug_demo/presentation/homepage/view/homepage.dart';
 import 'package:rug_demo/presentation/login/view/login_page.dart';
 import 'package:rug_demo/presentation/signup/view/signup_page.dart';
 
 class OnboardingScreen extends StatefulWidget {
+  static const String routeName = '/onboarding';
   const OnboardingScreen({super.key});
 
   @override
@@ -58,12 +62,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   label: "I'm already a member.",
                   label2: "Login",
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (BuildContext context) => const LoginScreen(),
-                      ),
-                    );
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //     builder: (BuildContext context) => const LoginScreen(),
+                    //   ),
+                    // );
+                    context.goNamed(LoginScreen.routeName);
                   },
                   color: AppColors.primaryColor,
                 ),
@@ -75,12 +80,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   textColor1: Colors.grey[400],
                   label2: "Signup",
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (BuildContext context) => const SignupScreen(),
-                      ),
-                    );
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //     builder: (BuildContext context) => const SignupScreen(),
+                    //   ),
+                    // );
+                    
+                    context.goNamed(SignupScreen.routeName);
                   },
                   color: AppColors.selectedItemColor,
                 ),

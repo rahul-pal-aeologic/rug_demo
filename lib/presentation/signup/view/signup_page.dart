@@ -4,6 +4,7 @@ import 'package:rug_demo/presentation/common_widgets/primary_button.dart';
 import 'package:rug_demo/presentation/login/view/login_page.dart';
 
 class SignupScreen extends StatefulWidget {
+  static const String routeName = '/signup';
   const SignupScreen({super.key});
 
   @override
