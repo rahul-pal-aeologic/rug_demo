@@ -1,17 +1,20 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:rug_demo/global/resource/app_colors.dart';
+import 'package:rug_demo/global/resource/app_styles.dart';
 
 class RugBriefViewWidget extends StatelessWidget {
   final String name;
   final void Function() onTap;
-  final int price;
+  final double price;
   final double rating;
+  final String image;
   const RugBriefViewWidget(
       {super.key,
       required this.name,
       required this.price,
       required this.rating,
+      required this.image,
       required this.onTap});
 
   @override
@@ -35,8 +38,7 @@ class RugBriefViewWidget extends StatelessWidget {
                   child: CachedNetworkImage(
                       height: 100,
                       width: 200,
-                      imageUrl:
-                          'https://media.istockphoto.com/id/542827628/photo/traditional-carpet-store.webp?s=612x612&w=is&k=20&c=3lk3edH3zbKUv0v2vz9jqjL7qSSviXb5s52ntvu0BfY=',
+                      imageUrl: image,
                       fit: BoxFit.cover),
                 ),
                 Padding(
@@ -45,6 +47,7 @@ class RugBriefViewWidget extends StatelessWidget {
                     children: [
                       Text(
                         name,
+                        style: AppStyles.regularBoldTextWithColor(Colors.black),
                       ),
                     ],
                   ),
@@ -52,19 +55,23 @@ class RugBriefViewWidget extends StatelessWidget {
                 Flexible(
                   child: Padding(
                     padding:
-                        const EdgeInsets.only(left: 8.0, right: 8, bottom: 10),
+                        const EdgeInsets.only(left: 8.0, right: 8, bottom: 8),
                     child: Row(
                       // mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text.rich(
                           TextSpan(
-                            text: 'Rs.',
+                            text: 'Rs. ',
+                            style: AppStyles.regularBoldTextWithColor(
+                                Colors.black),
                             children: <InlineSpan>[
                               TextSpan(
                                 text: price.toString(),
                                 style: const TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.bold),
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                    color: AppColors.primaryColor),
                               ),
                             ],
                           ),
@@ -76,7 +83,11 @@ class RugBriefViewWidget extends StatelessWidget {
                               size: 15,
                               color: Colors.amber,
                             ),
-                            Text(rating.toString())
+                            Text(
+                              rating.toString(),
+                              style: AppStyles.regularBoldTextWithColor(
+                                  Colors.black),
+                            )
                           ],
                         )
                       ],
@@ -98,7 +109,7 @@ class RugBriefViewWidget extends StatelessWidget {
                 top: 10,
                 child: CircleAvatar(
                     maxRadius: 10,
-                    backgroundColor: AppColors.blackColor,
+                    backgroundColor: AppColors.darkBlueShade,
                     child: Icon(
                       Icons.add,
                       size: 15,

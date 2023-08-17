@@ -12,26 +12,27 @@ class PrimaryButton extends StatelessWidget {
   final Color? color;
   final Color? textColor1;
   final Color? textColor2;
+  final double? height;
 
-  const PrimaryButton({
-    super.key,
-    this.loading,
-    required this.label,
-    this.onPressed,
-    this.disable,
-    this.iconName,
-    this.width,
-    this.color,
-    required this.label2,
-    this.textColor1,
-    this.textColor2,
-  });
+  const PrimaryButton(
+      {super.key,
+      this.loading,
+      required this.label,
+      this.onPressed,
+      this.disable,
+      this.iconName,
+      this.width,
+      this.color,
+      required this.label2,
+      this.textColor1,
+      this.textColor2,
+      this.height});
 
   @override
   Widget build(context) {
     return SizedBox(
-      height: 76,
-      // width: width ?? 200,
+      height: height ?? 76,
+      width: width,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           // shadowColor: AppColors.greyColor,

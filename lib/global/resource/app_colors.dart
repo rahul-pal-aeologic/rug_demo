@@ -4,7 +4,7 @@ class AppColors {
   static const Color mainBackgroundColor = Colors.white;
   static const Color textColorBlack = Color(0xFF192733);
   static const Color whiteShade1 = Color(0xFFDDDDDE);
-  static const Color primaryColor = Color(0xFF199A8E);
+  static const Color primaryColor = Color(0xFF15ACA7);
   static const Color loginBtnColor = Color(0xFF9B9284);
   static const Color textFormColor = Color(0xFF9EA8B1);
   static const Color eyeColor = Color(0xFFB4BCC3);
@@ -23,7 +23,7 @@ class AppColors {
   static const Color dialogBoxTextFieldColor = Color(0xFFF3F6F9);
   static const Color textColor1 = Color(0xFF717784);
   static const Color textColor2 = Color(0xFFA1A8B0); //for input fields hint
-  static const Color textColor3 = Color(0xFFBCC1CD);
+  static const Color textColor3 = Color(0xFFEEEEEE);
   static const Color dialogBoxBtnColor = Color(0xFFE6ECF1);
   static const Color dateTimeBoxBorderColor = Color(0xFF637F99);
   static const Color constantColor1 = Color(0xFFF6F6F5);
