@@ -56,6 +56,7 @@ class CustomDialogBox extends StatelessWidget {
               width: 200,
               child: PrimaryButton(
                 label: buttonText,
+                label2: "",
                 onPressed: onPressed,
               ),
             ),

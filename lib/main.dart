@@ -12,31 +12,31 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
- @override
+  @override
   Widget build(BuildContext context) {
-     return 
-     
-    //  MultiRepositoryProvider(
-    //   providers: [
-    //     // RepositoryProvider(create: ((context) => UserRepository())),
-    //   ],
-    //   child: MultiBlocProvider(
-    //     providers: [
-    //       // BlocProvider(create: (context) => LoginBloc()),
-    //     ],
-    //     child: 
+    return
+
+        //  MultiRepositoryProvider(
+        //   providers: [
+        //     // RepositoryProvider(create: ((context) => UserRepository())),
+        //   ],
+        //   child: MultiBlocProvider(
+        //     providers: [
+        //       // BlocProvider(create: (context) => LoginBloc()),
+        //     ],
+        //     child:
         MaterialApp.router(
-          debugShowCheckedModeBanner: false,
-          title: AppStrings.appName,
-          routerConfig: router,
-          theme: ThemeData(
-            primaryColor: AppColors.primaryColor,
-            appBarTheme: const AppBarTheme(
-              backgroundColor: AppColors.whiteColor,
-              iconTheme: IconThemeData(color: Colors.black),
-            ),
-          ),
-        );
+      debugShowCheckedModeBanner: false,
+      title: AppStrings.appName,
+      routerConfig: router,
+      theme: ThemeData(
+        primaryColor: AppColors.primaryColor,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: AppColors.whiteColor,
+          iconTheme: IconThemeData(color: Colors.black),
+        ),
+      ),
+    );
     //   ),
     // );
   }
