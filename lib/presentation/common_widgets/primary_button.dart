@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rug_demo/global/resource/app_colors.dart';
 import 'package:rug_demo/global/resource/app_dimensions.dart';
 import 'package:rug_demo/global/resource/app_styles.dart';
+
 class PrimaryButton extends StatelessWidget {
   final String label;
   final void Function()? onPressed;

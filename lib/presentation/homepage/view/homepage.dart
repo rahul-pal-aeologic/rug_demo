@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rug_demo/global/resource/app_dimensions.dart';
 import 'package:rug_demo/presentation/common_widgets/custom_scaffold_layout.dart';
 import 'package:rug_demo/presentation/common_widgets/custom_textfield.dart';
+import 'package:rug_demo/presentation/common_widgets/primary_button.dart';
 import 'package:rug_demo/presentation/homepage/view/widgets/rug_briefview.dart';
 
 class Homepage extends StatefulWidget {
@@ -26,6 +27,7 @@ class _HomepageState extends State<Homepage> {
               _HeaderRow(),
               normalSpacer,
               CustomTextField(
+                suffixIcon: Icon(Icons.search),
                   prefixIcon: Icon(Icons.filter_6_outlined),
                   hintText: 'Search for products..',
                   textFieldController: searchController,
@@ -39,20 +41,21 @@ class _HomepageState extends State<Homepage> {
                 child: GridView.builder(
                     // physics: NeverScrollableScrollPhysics(),
                     itemCount: 10,
-                    padding: EdgeInsets.all(5),
                     shrinkWrap: true,
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2),
                     itemBuilder: (BuildContext context, int index) {
                       return Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: RugBriefViewWidget(
-                            name: 'Iconic Rug',
-                            price: 9999,
-                            rating: 4.5,
-                            onTap: () {
-                              print("$index is tapped");
-                            }),
+                        child: Center(
+                          child: RugBriefViewWidget(
+                              name: 'Iconic Rug',
+                              price: 9999,
+                              rating: 4.5,
+                              onTap: () {
+                                print("$index is tapped");
+                              }),
+                        ),
                       );
                     }),
               )

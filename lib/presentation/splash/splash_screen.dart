@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:rug_demo/global/resource/app_colors.dart';
 import 'package:rug_demo/global/resource/app_dimensions.dart';
+import 'package:rug_demo/presentation/dashboard/view/dashboard_screen.dart';
 import 'package:rug_demo/presentation/homepage/view/homepage.dart';
 import 'package:rug_demo/presentation/homepage/view/widgets/rug_briefview.dart';
 import 'package:rug_demo/presentation/splash/widgets/logo.dart';
@@ -31,7 +32,7 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: AppColors.primaryColor,
       body: InkWell(
         onTap: () {
-          context.pushReplacementNamed(Homepage.routeName);
+          context.pushReplacementNamed(DashboardScreen.routeName);
         },
         child: SafeArea(
           child: Padding(

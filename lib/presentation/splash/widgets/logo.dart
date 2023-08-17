@@ -11,7 +11,8 @@ class LogoWidget extends StatelessWidget {
         Column(
           children: [
             const Spacer(),
-            Image.network('https://media.istockphoto.com/id/1443828576/vector/vector-design-template-for-social-media-teamwork.webp?s=2048x2048&w=is&k=20&c=bwZHynfmsYCJNv81Ytkrlnub3waezdpcKZ6qUZXcUsY='),
+            Image.network(
+                'https://media.istockphoto.com/id/1443828576/vector/vector-design-template-for-social-media-teamwork.webp?s=2048x2048&w=is&k=20&c=bwZHynfmsYCJNv81Ytkrlnub3waezdpcKZ6qUZXcUsY='),
             const Spacer(),
             Text(
               'TAP TO CONTINUE',
