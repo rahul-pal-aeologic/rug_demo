@@ -108,7 +108,7 @@ class CustomTextField extends StatelessWidget {
           width: MediaQuery.of(context).size.width * 0.9,
           decoration: BoxDecoration(
             color: AppColors.mainBackgroundColor,
-            borderRadius: BorderRadius.circular(24),
+            borderRadius: BorderRadius.circular(14),
             border: Border.all(color: Colors.grey, width: 0),
           ),
           child: Padding(
@@ -170,7 +170,7 @@ class CustomTextField extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 10, right: 10),
+                      padding: const EdgeInsets.only(left: 10, right: 0),
                       child: suffixIcon ??
                           const SizedBox(
                             width: 0,

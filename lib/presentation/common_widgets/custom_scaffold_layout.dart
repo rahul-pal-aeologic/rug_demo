@@ -22,7 +22,7 @@ class CustomScaffoldLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(backgroundColor: Colors.white,
       appBar: showAppbar
           ? AppBar(
               leading: InkWell(
@@ -31,7 +31,7 @@ class CustomScaffoldLayout extends StatelessWidget {
                   context.pop();
                 },
               ),
-              centerTitle: true,
+              centerTitle: false,
               title: Text(
                 appbarTitle ?? '',
                 style: AppStyles.largeBoldTextWithColor(
@@ -50,9 +50,9 @@ class CustomScaffoldLayout extends StatelessWidget {
                 layoutMinHeight ?? AppDimentions.loginPageMinHeight,
                 constraints.maxHeight,
               ),
-              padding: const EdgeInsets.symmetric(
-                  horizontal: AppDimentions.px20, vertical: 20),
-              decoration: const BoxDecoration(color: AppColors.whiteColor),
+              // padding: const EdgeInsets.symmetric(
+              //     horizontal: AppDimentions.px20, vertical: 20),
+              decoration: const BoxDecoration(color: Colors.white),
               child: child),
         ),
       ),

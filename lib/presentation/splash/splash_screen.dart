@@ -40,6 +40,7 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
             child: Center(
                 child: RugBriefViewWidget(
+                  image: '',
               name: 'name',
               price: 123,
               rating: 4.5,
