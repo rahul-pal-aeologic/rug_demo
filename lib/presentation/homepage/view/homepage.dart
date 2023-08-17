@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:rug_demo/global/resource/app_dimensions.dart';
 import 'package:rug_demo/presentation/common_widgets/custom_scaffold_layout.dart';
 import 'package:rug_demo/presentation/common_widgets/custom_textfield.dart';
-import 'package:rug_demo/presentation/common_widgets/primary_button.dart';
 import 'package:rug_demo/presentation/homepage/view/widgets/rug_briefview.dart';
 
 class Homepage extends StatefulWidget {

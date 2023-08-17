@@ -1,6 +1,7 @@
 import 'package:go_router/go_router.dart';
 import 'package:rug_demo/main.dart';
 import 'package:rug_demo/presentation/dashboard/view/dashboard_screen.dart';
+import 'package:rug_demo/presentation/filter/view/filter_page.dart';
 import 'package:rug_demo/presentation/homepage/view/homepage.dart';
 import 'package:rug_demo/presentation/login/view/login_page.dart';
 import 'package:rug_demo/presentation/onboarding/view/onboarding_page.dart';
@@ -14,7 +15,7 @@ final GoRouter router = GoRouter(
     GoRoute(
       name: OnboardingScreen.routeName,
       path: OnboardingScreen.routeName,
-      builder: (context, state) => const OnboardingScreen(),
+      builder: (context, state) => const FilterScreen(),
     ),
     GoRoute(
       name: SplashScreen.routeName,
@@ -40,6 +41,11 @@ final GoRouter router = GoRouter(
       name: DashboardScreen.routeName,
       path: DashboardScreen.routeName,
       builder: (context, state) => const DashboardScreen(),
+    ),
+    GoRoute(
+      name: FilterScreen.routeName,
+      path: FilterScreen.routeName,
+      builder: (context, state) => const FilterScreen(),
     ),
   ],
 );
