@@ -51,11 +51,10 @@ class _ColorSelectorState extends State<ColorSelector> {
                   borderRadius: BorderRadius.circular(100)),
               child: Column(
                 children: [
-
-                  CircleAvatar(maxRadius: 10,
+                  CircleAvatar(
+                    maxRadius: 10,
                     backgroundColor: widget.list[i].color,
                   )
-
                 ],
               ),
             ),

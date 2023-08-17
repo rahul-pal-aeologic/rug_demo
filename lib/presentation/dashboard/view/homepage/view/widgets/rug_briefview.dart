@@ -14,7 +14,7 @@ class RugBriefViewWidget extends StatelessWidget {
       required this.name,
       required this.price,
       required this.rating,
-  required this.image,
+      required this.image,
       required this.onTap});
 
   @override
@@ -38,8 +38,7 @@ class RugBriefViewWidget extends StatelessWidget {
                   child: CachedNetworkImage(
                       height: 100,
                       width: 200,
-                      imageUrl:
-                          image,
+                      imageUrl: image,
                       fit: BoxFit.cover),
                 ),
                 Padding(
@@ -63,12 +62,16 @@ class RugBriefViewWidget extends StatelessWidget {
                       children: [
                         Text.rich(
                           TextSpan(
-                            text: 'Rs. ',style: AppStyles.regularBoldTextWithColor(Colors.black),
+                            text: 'Rs. ',
+                            style: AppStyles.regularBoldTextWithColor(
+                                Colors.black),
                             children: <InlineSpan>[
                               TextSpan(
                                 text: price.toString(),
                                 style: const TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.bold,color: AppColors.primaryColor),
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                    color: AppColors.primaryColor),
                               ),
                             ],
                           ),
@@ -80,7 +83,11 @@ class RugBriefViewWidget extends StatelessWidget {
                               size: 15,
                               color: Colors.amber,
                             ),
-                            Text(rating.toString(),style: AppStyles.regularBoldTextWithColor(Colors.black),)
+                            Text(
+                              rating.toString(),
+                              style: AppStyles.regularBoldTextWithColor(
+                                  Colors.black),
+                            )
                           ],
                         )
                       ],

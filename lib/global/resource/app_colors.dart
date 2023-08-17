@@ -4,7 +4,7 @@ class AppColors {
   static const Color mainBackgroundColor = Colors.white;
   static const Color textColorBlack = Color(0xFF192733);
   static const Color whiteShade1 = Color(0xFFDDDDDE);
-  static const Color primaryColor = Color(0xFF15ACA7 );
+  static const Color primaryColor = Color(0xFF15ACA7);
   static const Color loginBtnColor = Color(0xFF9B9284);
   static const Color textFormColor = Color(0xFF9EA8B1);
   static const Color eyeColor = Color(0xFFB4BCC3);

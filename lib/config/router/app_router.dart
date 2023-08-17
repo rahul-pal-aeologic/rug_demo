@@ -58,7 +58,7 @@ final GoRouter router = GoRouter(
       name: DesignRug.routeName,
       path: DesignRug.routeName,
       builder: (context, state) {
-        return DesignRug();
+        return const DesignRug();
       },
     ),
   ],

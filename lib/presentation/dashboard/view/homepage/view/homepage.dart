@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:rug_demo/global/resource/app_assets.dart';
-import 'package:rug_demo/global/resource/app_colors.dart';
 import 'package:rug_demo/global/resource/app_dimensions.dart';
 import 'package:rug_demo/global/resource/app_styles.dart';
 import 'package:rug_demo/models/rug/rug_dummy_model.dart';
@@ -22,7 +20,6 @@ class Homepage extends StatefulWidget {
 
 class _HomepageState extends State<Homepage> {
   final TextEditingController searchController = TextEditingController();
-
 
   // void initState() {
   //  SystemChannels.textInput.invokeMethod('TextInput.hide');
@@ -46,9 +43,17 @@ class _HomepageState extends State<Homepage> {
                       onTap: () {
                         print("search tapped");
                       },
-                      child:SvgPicture.asset(AppAssets.searchbar, width: 50,height: 50,),
+                      child: SvgPicture.asset(
+                        AppAssets.searchbar,
+                        width: 50,
+                        height: 50,
+                      ),
                     ),
-                    prefixIcon: SvgPicture.asset(AppAssets.filterSvg, width: 20,height: 20,),
+                    prefixIcon: SvgPicture.asset(
+                      AppAssets.filterSvg,
+                      width: 20,
+                      height: 20,
+                    ),
                     hintText: 'Search for products..',
                     textFieldController: searchController,
                     valueDidChange: (_) {},
@@ -105,15 +110,15 @@ class _HeaderRow extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-
         InkWell(
-          
-          onTap: (){
-            print("sidebar pressed");
-         
-          },
-          child: SvgPicture.asset(AppAssets.menu,width: 15,height: 15,)),
-       
+            onTap: () {
+              print("sidebar pressed");
+            },
+            child: SvgPicture.asset(
+              AppAssets.menu,
+              width: 15,
+              height: 15,
+            )),
         IconButton(
           onPressed: () {
             print("cart pressed");

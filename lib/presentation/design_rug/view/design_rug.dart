@@ -14,8 +14,8 @@ class _DesignRugState extends State<DesignRug> {
   Widget build(BuildContext context) {
     return CustomScaffoldLayout(
       showAppbar: true,
-      child: Column(),
       appbarTitle: 'Design your Own Rug',
+      child: const Column(),
     );
   }
 }
