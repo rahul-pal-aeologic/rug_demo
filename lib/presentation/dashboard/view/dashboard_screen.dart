@@ -72,16 +72,19 @@ class BottomNavigation extends StatelessWidget {
           BottomNavigationBarItem(
             icon: Icon(Icons.browse_gallery_outlined,
                 color: AppColors.blackColor),
-            activeIcon: Icon(Icons.browse_gallery, color: AppColors.primaryColor),
+            activeIcon:
+                Icon(Icons.browse_gallery, color: AppColors.primaryColor),
             label: '',
-          ), 
+          ),
           //notifications
           BottomNavigationBarItem(
-            icon: Icon(Icons.notifications_outlined, color: AppColors.blackColor),
-            activeIcon: Icon(Icons.notifications, color: AppColors.primaryColor),
+            icon:
+                Icon(Icons.notifications_outlined, color: AppColors.blackColor),
+            activeIcon:
+                Icon(Icons.notifications, color: AppColors.primaryColor),
             label: '',
             // label: 'home',
-          ), 
+          ),
           //settings
           BottomNavigationBarItem(
             icon: Icon(Icons.settings_outlined, color: AppColors.blackColor),

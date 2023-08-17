@@ -21,28 +21,27 @@ class MyApp extends StatelessWidget {
         //   providers: [
         //     // RepositoryProvider(create: ((context) => UserRepository())),
         //   ],
-        //   child: 
-          
-          MultiBlocProvider(
+        //   child:
+
+        MultiBlocProvider(
             providers: [
-        BlocProvider<BottomNavCubit>(
-          create: (_) => BottomNavCubit(),
-        ),
-            ],
-            child:
-        MaterialApp.router(
-      debugShowCheckedModeBanner: false,
-      title: AppStrings.appName,
-      routerConfig: router,
-      theme: ThemeData(
-        primaryColor: AppColors.primaryColor,
-        appBarTheme: const AppBarTheme(
-          backgroundColor: AppColors.whiteColor,
-          iconTheme: IconThemeData(color: Colors.black),
-        ),
-      ),
-    )
-      // ),
-    );
+          BlocProvider<BottomNavCubit>(
+            create: (_) => BottomNavCubit(),
+          ),
+        ],
+            child: MaterialApp.router(
+              debugShowCheckedModeBanner: false,
+              title: AppStrings.appName,
+              routerConfig: router,
+              theme: ThemeData(
+                primaryColor: AppColors.primaryColor,
+                appBarTheme: const AppBarTheme(
+                  backgroundColor: AppColors.whiteColor,
+                  iconTheme: IconThemeData(color: Colors.black),
+                ),
+              ),
+            )
+            // ),
+            );
   }
 }

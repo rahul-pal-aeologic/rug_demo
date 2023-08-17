@@ -27,7 +27,7 @@ class _HomepageState extends State<Homepage> {
               _HeaderRow(),
               normalSpacer,
               CustomTextField(
-                suffixIcon: Icon(Icons.search),
+                  suffixIcon: Icon(Icons.search),
                   prefixIcon: Icon(Icons.filter_6_outlined),
                   hintText: 'Search for products..',
                   textFieldController: searchController,

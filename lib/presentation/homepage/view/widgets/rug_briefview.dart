@@ -20,7 +20,6 @@ class RugBriefViewWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 200,
-      
       decoration: BoxDecoration(
           border: Border.all(width: 2, color: AppColors.textColor3),
           // color: Colors.red,
