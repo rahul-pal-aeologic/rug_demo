@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:rug_demo/global/resource/app_colors.dart';
-import 'package:rug_demo/global/resource/app_dimensions.dart';import 'package:rug_demo/presentation/splash/widgets/logo.dart';
+import 'package:rug_demo/global/resource/app_dimensions.dart';
+import 'package:rug_demo/presentation/homepage/view/homepage.dart';
+import 'package:rug_demo/presentation/homepage/view/widgets/rug_briefview.dart';
+import 'package:rug_demo/presentation/splash/widgets/logo.dart';
 
 class SplashScreen extends StatefulWidget {
   static const String routeName = '/splash';
@@ -20,7 +23,6 @@ class _SplashScreenState extends State<SplashScreen> {
       //   return LandingPage();
       // }));
 
-      print("------------------2 seconds gone");
       // context.goNamed(LandingPage.routeName);
       // dispose();
     });
@@ -29,17 +31,22 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: AppColors.primaryColor,
       body: InkWell(
         onTap: () {
-          // context.pushReplacementNamed(LandingPage.routeName);
+          context.pushReplacementNamed(Homepage.routeName);
         },
-        child: const SafeArea(
+        child: SafeArea(
           child: Padding(
             padding: EdgeInsets.symmetric(
               vertical: AppDimentions.px30,
               horizontal: AppDimentions.px20,
             ),
             child: Center(
-                child: InkWell(
-              child: LogoWidget(),
+                child: RugBriefViewWidget(
+              name: 'name',
+              price: 123,
+              rating: 4.5,
+              onTap: () {
+                print("rug briewf view widget presses");
+              },
             )
                 // Column(
                 //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
