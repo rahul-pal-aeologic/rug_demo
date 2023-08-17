@@ -86,7 +86,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     //     builder: (BuildContext context) => const SignupScreen(),
                     //   ),
                     // );
-                    
+
                     context.goNamed(SignupScreen.routeName);
                   },
                   color: AppColors.selectedItemColor,

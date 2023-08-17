@@ -136,8 +136,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     label: "",
                     label2: "Login",
                     onPressed: () {
-                      
-                    context.goNamed(DashboardScreen.routeName);
+                      context.goNamed(DashboardScreen.routeName);
                     },
                     color: AppColors.primaryColor,
                   ),
