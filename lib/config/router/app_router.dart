@@ -1,12 +1,21 @@
 import 'package:go_router/go_router.dart';
 import 'package:rug_demo/main.dart';
+import 'package:rug_demo/presentation/dashboard/view/dashboard_screen.dart';
 import 'package:rug_demo/presentation/homepage/view/homepage.dart';
+import 'package:rug_demo/presentation/login/view/login_page.dart';
+import 'package:rug_demo/presentation/onboarding/view/onboarding_page.dart';
+import 'package:rug_demo/presentation/signup/view/signup_page.dart';
 import 'package:rug_demo/presentation/splash/splash_screen.dart';
 
 final GoRouter router = GoRouter(
-  initialLocation: SplashScreen.routeName,
+  initialLocation: OnboardingScreen.routeName,
   navigatorKey: navigationKey,
   routes: [
+    GoRoute(
+      name: OnboardingScreen.routeName,
+      path: OnboardingScreen.routeName,
+      builder: (context, state) => const OnboardingScreen(),
+    ),
     GoRoute(
       name: SplashScreen.routeName,
       path: SplashScreen.routeName,
@@ -16,6 +25,21 @@ final GoRouter router = GoRouter(
       name: Homepage.routeName,
       path: Homepage.routeName,
       builder: (context, state) => const Homepage(),
+    ),
+    GoRoute(
+      name: LoginScreen.routeName,
+      path: LoginScreen.routeName,
+      builder: (context, state) => const LoginScreen(),
+    ),
+    GoRoute(
+      name: SignupScreen.routeName,
+      path: SignupScreen.routeName,
+      builder: (context, state) => const SignupScreen(),
+    ),
+    GoRoute(
+      name: DashboardScreen.routeName,
+      path: DashboardScreen.routeName,
+      builder: (context, state) => const DashboardScreen(),
     ),
   ],
 );
