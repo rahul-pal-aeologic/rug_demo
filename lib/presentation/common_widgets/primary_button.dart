@@ -58,12 +58,16 @@ class PrimaryButton extends StatelessWidget {
                       Text(
                         label,
                         style: TextStyle(
-                            fontWeight: FontWeight.w500, color: textColor1),
+                            fontWeight: FontWeight.w500,
+                            color: textColor1,
+                            fontSize: 16),
                       ),
                       Text(
                         label2,
                         style: TextStyle(
-                            fontWeight: FontWeight.w900, color: textColor2),
+                            fontWeight: FontWeight.w600,
+                            color: textColor2,
+                            fontSize: 17),
                       ),
                     ],
                   ),

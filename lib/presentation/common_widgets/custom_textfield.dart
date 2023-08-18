@@ -113,7 +113,7 @@ class CustomTextField extends StatelessWidget {
           decoration: BoxDecoration(
             color: boxColor,
             borderRadius: BorderRadius.circular(14),
-            border: Border.all(color: Colors.grey, width: 1),
+            border: Border.all(color: Colors.grey, width: 2),
           ),
           child: Padding(
             padding: const EdgeInsets.all(8),
@@ -159,9 +159,10 @@ class CustomTextField extends StatelessWidget {
                         //     color: AppColors.textColor1,
                         //     textOverflow: TextOverflow.ellipsis),
                         decoration: InputDecoration(
+                          contentPadding: EdgeInsets.only(left: 20),
                           // hintText: hintText,
                           labelText: hintText,
-                          labelStyle: AppStyles.headerStyleMonst,
+                          labelStyle: AppStyles.headerStyle,
 
                           // suffix: Padding(
                           //   padding: EdgeInsets.only(left: 10, right: 10),
@@ -180,7 +181,7 @@ class CustomTextField extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 10, right: 0),
+                      padding: const EdgeInsets.only(left: 10, right: 10),
                       child: suffixIcon ??
                           const SizedBox(
                             width: 0,

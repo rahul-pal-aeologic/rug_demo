@@ -47,13 +47,13 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 const Padding(
-                  padding: EdgeInsets.only(top: 45, bottom: 30),
+                  padding: EdgeInsets.only(top: 65, bottom: 30),
                   child: Text(
                     "Sign In to continue",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         color: AppColors.blackColor,
-                        fontSize: 30,
+                        fontSize: 35,
                         fontWeight: FontWeight.w500),
                   ),
                 ),
@@ -90,7 +90,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 //   ),
                 // ),
                 CustomTextField(
-                  height: 80,
+                  height: 70,
                   hintText: "Email",
                   boxColor: Colors.grey[300],
                   textFieldController: _emailCon,
@@ -101,12 +101,17 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: 10,
                 ),
                 CustomTextField(
-                  height: 80,
+                  height: 70,
                   hintText: "Password",
                   boxColor: Colors.grey[300],
                   textFieldController: _passCon,
                   valueDidChange: (_) {},
                   onFocusChange: (_) {},
+                  suffixIcon: const Icon(
+                    Icons.visibility_off,
+                    size: 30,
+                    color: AppColors.greyColor,
+                  ),
                 ),
 
                 // Container(
@@ -151,7 +156,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 35, bottom: 10),
+                  padding: const EdgeInsets.only(top: 45, bottom: 10),
                   child: PrimaryButton(
                     label: "",
                     label2: "Login",
@@ -166,7 +171,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: PrimaryButton(
                     label: "I'm new user.",
                     textColor1: Colors.grey[400],
-                    label2: "Signup",
+                    label2: " Signup",
                     onPressed: () {
                       Navigator.push(
                         context,

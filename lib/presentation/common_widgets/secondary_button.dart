@@ -19,14 +19,14 @@ class SecondaryButton extends StatelessWidget {
   @override
   Widget build(context) {
     return SizedBox(
-      height: 56,
+      height: 80,
       width: width,
       child: ElevatedButton(
           style: ElevatedButton.styleFrom(
             // shadowColor: AppColors.primaryColor,
             backgroundColor: AppColors.mainBackgroundColor,
             shape: RoundedRectangleBorder(
-              side: const BorderSide(color: AppColors.textColor2, width: 2),
+              side: const BorderSide(color: AppColors.greyColor, width: 2.5),
               borderRadius: BorderRadius.circular(14),
             ),
           ),
@@ -40,7 +40,7 @@ class SecondaryButton extends StatelessWidget {
                   ellipsis: TextOverflow.ellipsis,
                   color: (disable ?? false)
                       ? AppColors.greyColor
-                      : AppColors.primaryColor,
+                      : AppColors.blackColor,
                 ),
               ),
               if (iconName != null)

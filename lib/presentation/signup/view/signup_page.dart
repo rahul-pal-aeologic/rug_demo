@@ -28,7 +28,7 @@ class _SignupScreenState extends State<SignupScreen> {
             height: 400,
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 25, right: 25),
+            padding: const EdgeInsets.only(left: 30, right: 30),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -75,7 +75,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 //   ),
                 // ),
                 CustomTextField(
-                  height: 80,
+                  height: 70,
                   hintText: "Name",
                   boxColor: Colors.grey[300],
                   textFieldController: _nameCon,
@@ -83,10 +83,10 @@ class _SignupScreenState extends State<SignupScreen> {
                   onFocusChange: (_) {},
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 CustomTextField(
-                  height: 80,
+                  height: 70,
                   hintText: "Email ID",
                   boxColor: Colors.grey[300],
                   textFieldController: _emailCon,
@@ -94,10 +94,10 @@ class _SignupScreenState extends State<SignupScreen> {
                   onFocusChange: (_) {},
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 CustomTextField(
-                  height: 80,
+                  height: 70,
                   hintText: "Mobile Number",
                   boxColor: Colors.grey[300],
                   textFieldController: _mobCon,
@@ -105,10 +105,10 @@ class _SignupScreenState extends State<SignupScreen> {
                   onFocusChange: (_) {},
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 CustomTextField(
-                  height: 80,
+                  height: 70,
                   hintText: "Password",
                   boxColor: Colors.grey[300],
                   textFieldController: _passCon,
@@ -119,7 +119,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 // _textField("Mobile Number"),
                 // _textField("Password"),
                 Padding(
-                  padding: const EdgeInsets.only(top: 35, bottom: 10),
+                  padding: const EdgeInsets.only(top: 65, bottom: 10),
                   child: PrimaryButton(
                     label: "",
                     label2: "Signup",
@@ -131,7 +131,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   padding: const EdgeInsets.only(top: 5, bottom: 10),
                   child: PrimaryButton(
                     label: "I'm already a member.",
-                    textColor1: Colors.grey[400],
+                    textColor1: Colors.grey[300],
                     label2: " Login",
                     onPressed: () {
                       Navigator.push(

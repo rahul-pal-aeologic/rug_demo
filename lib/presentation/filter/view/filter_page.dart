@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:rug_demo/global/resource/app_colors.dart';
+import 'package:rug_demo/models/rug/filter_model.dart';
 import 'package:rug_demo/presentation/common_widgets/custom_scaffold_layout.dart';
 import 'package:rug_demo/presentation/common_widgets/primary_button.dart';
+import 'package:rug_demo/presentation/filter/view/widgets/filter_selection.dart';
 import 'package:rug_demo/presentation/filtered_rugs/view/filtered_rugs.dart';
 
 class FilterScreen extends StatefulWidget {
@@ -151,50 +153,55 @@ class _FilterScreenState extends State<FilterScreen> {
                     ),
                   ],
                 ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    _listItem(
-                      "assets/greycircle.png",
-                      "Allon Gullery",
-                    ),
-                    _listItem(
-                      "assets/greycircle.png",
-                      "Ayeno Murayama",
-                    ),
-                    _listItem(
-                      "assets/bluecircle.png",
-                      "Fractal Kust",
-                    ),
-                    _listItem(
-                      "assets/bluecircle.png",
-                      "Ibrahim Hassam",
-                    ),
-                    _listItem(
-                      "assets/bluecircle.png",
-                      "Locand Nagy",
-                    ),
-                    _listItem(
-                      "assets/greycircle.png",
-                      "Make Gardon",
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 420, left: 30),
-                      child: SizedBox(
-                        width: 180,
-                        height: 60,
-                        child: PrimaryButton(
-                          label: "",
-                          label2: "Apply Filter",
-                          onPressed: () {
-                            context.pushNamed(FilteredRugs.routeName);
-                          },
-                          color: AppColors.primaryColor,
-                        ),
-                      ),
-                    ),
-                  ],
-                )
+                FilterSelection(
+                    list: filterList,
+                    onSelect: (value) {
+                      print(value?.filterName);
+                    }),
+                // Column(
+                //   crossAxisAlignment: CrossAxisAlignment.start,
+                //   children: [
+                //     _listItem(
+                //       "assets/greycircle.png",
+                //       "Allon Gullery",
+                //     ),
+                //     _listItem(
+                //       "assets/greycircle.png",
+                //       "Ayeno Murayama",
+                //     ),
+                //     _listItem(
+                //       "assets/bluecircle.png",
+                //       "Fractal Kust",
+                //     ),
+                //     _listItem(
+                //       "assets/bluecircle.png",
+                //       "Ibrahim Hassam",
+                //     ),
+                //     _listItem(
+                //       "assets/bluecircle.png",
+                //       "Locand Nagy",
+                //     ),
+                //     _listItem(
+                //       "assets/greycircle.png",
+                //       "Make Gardon",
+                //     ),
+                //     Padding(
+                //       padding: const EdgeInsets.only(top: 420, left: 30),
+                //       child: SizedBox(
+                //         width: 180,
+                //         height: 60,
+                //         child: PrimaryButton(
+                //           label: "",
+                //           label2: "Apply Filter",
+                //           onPressed: () {
+                //             context.pushNamed(FilteredRugs.routeName);
+                //           },
+                //           color: AppColors.primaryColor,
+                //         ),
+                //       ),
+                //     ),
+                //   ],
+                // )
               ],
             )
           ],
