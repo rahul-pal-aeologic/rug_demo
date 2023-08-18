@@ -32,14 +32,14 @@ class _HomepageState extends State<Homepage> {
         showAppbar: false,
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10.0),
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                normalSpacer,
                 const _HeaderRow(),
-                normalSpacer,
+                minimumSpacer,
                 CustomTextField(
+                    height: 56,
                     suffixIcon: InkWell(
                       onTap: () {
                         print("search tapped");
@@ -58,7 +58,7 @@ class _HomepageState extends State<Homepage> {
                         height: 20,
                       ),
                     ),
-                    hintText: 'Search for products..',
+                    hintText: 'Search for products...',
                     textFieldController: searchController,
                     valueDidChange: (_) {},
                     onFocusChange: (_) {}),
@@ -67,22 +67,23 @@ class _HomepageState extends State<Homepage> {
                   children: [
                     Text(
                       'Trending',
-                      style: AppStyles.largeBoldTextWithColor(Colors.black),
+                      style: AppStyles.normalBoldTextWithColor(Colors.black),
                     ),
                   ],
                 ),
-                // minimumSpacer,
+                minimumSpacer,
                 SizedBox(
                   // color: Colors.orange,
-                  height: MediaQuery.of(context).size.height / 1.6,
+                  // height: MediaQuery.of(context).size.height / 1.6,
                   child: GridView.builder(
-                      // physics: NeverScrollableScrollPhysics(),
+                      physics: NeverScrollableScrollPhysics(),
                       itemCount: staticRugs.length,
                       shrinkWrap: true,
                       gridDelegate:
                           const SliverGridDelegateWithFixedCrossAxisCount(
                               crossAxisSpacing: 8,
-                              childAspectRatio: 1,
+                              childAspectRatio: 12/13,
+                              mainAxisSpacing: 8,
                               crossAxisCount: 2),
                       itemBuilder: (BuildContext context, int index) {
                         return Center(
