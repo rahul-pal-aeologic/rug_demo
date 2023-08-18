@@ -1,15 +1,14 @@
 class FilterModel {
   final String filterName;
-  const FilterModel({
-    required this.filterName,
-  });
+  bool isSelected;
+  FilterModel({required this.filterName, this.isSelected = false});
 }
 
 List<FilterModel> filterList = [
-  const FilterModel(filterName: "Allon Gullery"),
-  const FilterModel(filterName: "Ayeno Murayama"),
-  const FilterModel(filterName: "Fractal Kust"),
-  const FilterModel(filterName: "Ibrahim Hassam"),
-  const FilterModel(filterName: "Locand Nagy"),
-  const FilterModel(filterName: "Make Gardon"),
+  FilterModel(filterName: "Allon Gullery"),
+  FilterModel(filterName: "Ayeno Murayama"),
+  FilterModel(filterName: "Fractal Kust"),
+  FilterModel(filterName: "Ibrahim Hassam"),
+  FilterModel(filterName: "Locand Nagy"),
+  FilterModel(filterName: "Make Gardon"),
 ];

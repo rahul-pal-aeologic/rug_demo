@@ -4,6 +4,7 @@ import 'package:rug_demo/models/rug/filter_model.dart';
 
 class FilterSelection extends StatefulWidget {
   final List<FilterModel> list;
+
   final void Function(FilterModel?) onSelect;
   const FilterSelection(
       {super.key, required this.list, required this.onSelect});
@@ -14,6 +15,7 @@ class FilterSelection extends StatefulWidget {
 
 class _FilterSelectionState extends State<FilterSelection> {
   FilterModel? selected;
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -23,7 +25,8 @@ class _FilterSelectionState extends State<FilterSelection> {
         for (int i = 0; i < widget.list.length; i++)
           InkWell(
             onTap: () {
-              selected = widget.list[i];
+              widget.list[i].isSelected = !widget.list[i].isSelected;
+
               print("object");
               print(widget.list[i]);
               setState(() {});
@@ -43,7 +46,7 @@ class _FilterSelectionState extends State<FilterSelection> {
                   SizedBox(
                     width: 20,
                     child: Image.asset(
-                      (selected == widget.list[i])
+                      (widget.list[i].isSelected)
                           ? "assets/bluecircle.png"
                           : "assets/greycircle.png",
                       width: 20,
@@ -56,7 +59,7 @@ class _FilterSelectionState extends State<FilterSelection> {
                   Text(
                     widget.list[i].filterName,
                     textAlign: TextAlign.start,
-                    style: TextStyle(
+                    style: const TextStyle(
                         color: AppColors.blackColor,
                         fontSize: 16,
                         fontWeight: FontWeight.w600),

@@ -21,7 +21,7 @@ class SecondaryButton extends StatelessWidget {
   @override
   Widget build(context) {
     return SizedBox(
-      height:height ??80,
+      height: height ?? 80,
       width: width,
       child: ElevatedButton(
           style: ElevatedButton.styleFrom(
@@ -38,12 +38,17 @@ class SecondaryButton extends StatelessWidget {
             children: [
               Text(
                 label,
-                style: AppStyles.mediumBoldTextWithColor(
-                  ellipsis: TextOverflow.ellipsis,
-                  color: (disable ?? false)
-                      ? AppColors.greyColor
-                      : AppColors.blackColor,
-                ),
+                style: const TextStyle(
+                    fontWeight: FontWeight.w500,
+                    fontFamily: 'Axiforma-Regular',
+                    color: Colors.black,
+                    fontSize: 16),
+                // style: AppStyles.mediumBoldTextWithColor(
+                //   ellipsis: TextOverflow.ellipsis,
+                // color: (disable ?? false)
+                //     ? AppColors.greyColor
+                //     : AppColors.blackColor,
+                // ),
               ),
               if (iconName != null)
                 Flexible(

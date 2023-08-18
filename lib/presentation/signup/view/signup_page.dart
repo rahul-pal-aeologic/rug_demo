@@ -34,7 +34,7 @@ class _SignupScreenState extends State<SignupScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Padding(
-                  padding: EdgeInsets.only(top: 105, bottom: 5),
+                  padding: EdgeInsets.only(top: 92, bottom: 0),
                   child: Text(
                     "Create New,",
                     textAlign: TextAlign.center,
