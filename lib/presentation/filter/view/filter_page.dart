@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:rug_demo/global/resource/app_colors.dart';
 import 'package:rug_demo/presentation/common_widgets/primary_button.dart';
+import 'package:rug_demo/presentation/filtered_rugs/view/filtered_rugs.dart';
 
 class FilterScreen extends StatefulWidget {
   static const String routeName = '/filter';
@@ -184,7 +185,7 @@ class _FilterScreenState extends State<FilterScreen> {
                           label: "",
                           label2: "Apply Filter",
                           onPressed: () {
-                            Navigator.of(context);
+                           context.pushNamed(FilteredRugs.routeName);
                           },
                           color: AppColors.primaryColor,
                         ),

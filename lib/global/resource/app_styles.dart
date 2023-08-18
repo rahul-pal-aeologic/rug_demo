@@ -182,10 +182,10 @@ class AppStyles {
         fontFamily: 'Axiforma');
   }
 
-  static TextStyle smallBoldTextWithUnderline(Color color) {
+  static TextStyle smallBoldTextWithUnderline(Color color, {double? size}) {
     return TextStyle(
         color: color,
-        fontSize: _smallFontSize,
+        fontSize: size ??_smallFontSize,
         fontWeight: FontWeight.bold,
         fontFamily: 'Axiforma-Bold',
         decoration: TextDecoration.underline);

@@ -20,6 +20,7 @@ class AppDimentions {
   static const double loginPageMinHeight = 600;
   static const double propertyFilterPageMinHeight = 650;
   static const double buttonBorder = 32;
+  static const double bottomNavbarIconDimension = 20;
 
   static const double px0 = 0.0;
   static const double px0_1 = 0.1;
