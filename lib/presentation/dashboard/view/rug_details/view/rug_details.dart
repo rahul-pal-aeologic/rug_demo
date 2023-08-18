@@ -147,15 +147,18 @@ class _RugDetailsState extends State<RugDetails> {
                         ],
                       ),
                       normalSpacer,
-                      Row(
+                      Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(
+
+                          Row(children: [  Text(
                             'Color',
                             style: AppStyles.regularBoldTextWithColor(
                                 Colors.black),
                           ),
                           ColorSelector(
-                              list: colorsForRug, onSelect: (value) {})
+                              list: colorsForRug, onSelect: (value) {}),],),
+                        
+                          _AddQuantityWidget()
                         ],
                       ),
                       normalSpacer,
@@ -168,7 +171,7 @@ class _RugDetailsState extends State<RugDetails> {
                   lineLength: double.infinity,
                   lineThickness: 1.5,
                   dashLength: 4.0,
-                  dashColor: AppColors.textColor2,
+                  dashColor: AppColors.textColor3,
                   dashRadius: 0.0,
                   dashGapLength: 4.0,
                   dashGapColor: Colors.transparent,
@@ -265,14 +268,14 @@ class _AddToCartButton extends StatelessWidget {
                   MaterialStateProperty.all(AppColors.primaryColor)),
           onPressed: () {},
           child: SizedBox(
-            height: 56,
+            height: 70,
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 ClipRRect(
                   borderRadius: BorderRadius.circular(6),
                   child: Container(
-                    height: 30, width: 30,
+                    height: 40, width: 40,
                     color: AppColors.whiteColor.withAlpha(100),
                     padding: const EdgeInsets.all(4),
                     // child: Text('asdadss'),
@@ -286,6 +289,7 @@ class _AddToCartButton extends StatelessWidget {
                 Text('Add to cart',
                     style: AppStyles.regularBoldTextWithColor(Colors.white)),
                 const SizedBox(),
+                minimumSpacer,
                 Container(
                   width: 0.61,
                   color: Colors.white,
@@ -306,9 +310,73 @@ class _AddToCartButton extends StatelessWidget {
                     ],
                   ),
                 ),
+                minimumSpacer
               ],
             ),
           )),
+    );
+  }
+}
+
+class _AddQuantityWidget extends StatefulWidget {
+  const _AddQuantityWidget({super.key});
+
+  @override
+  State<_AddQuantityWidget> createState() => __AddQuantityWidgetState();
+}
+
+class __AddQuantityWidgetState extends State<_AddQuantityWidget> {
+  int data = 1;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 30,
+      padding: EdgeInsets.all(4),
+      decoration: BoxDecoration(
+          color: AppColors.textColor3, borderRadius: BorderRadius.circular(5)),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          InkWell(
+            onTap: () {
+              if (data > 1) {
+                data = data - 1;
+              }
+              setState(() {});
+            },
+            child: Container(
+                decoration: BoxDecoration(
+                    color: AppColors.whiteColor,
+                    borderRadius: BorderRadius.circular(5)),
+                child: Icon(
+                  Icons.remove,
+                  color: AppColors.backIconColor,
+                )),
+          ),
+          Container(
+            margin: EdgeInsets.symmetric(horizontal: 8),
+            child: Text(
+              data.toString(),
+              style: AppStyles.largeBoldTextWithColor(Colors.black),
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              data = data + 1;
+              setState(() {});
+            },
+            child: Container(
+                decoration: BoxDecoration(
+                    color: AppColors.whiteColor,
+                    borderRadius: BorderRadius.circular(5)),
+                child: Icon(
+                  Icons.add,
+                  color: AppColors.backIconColor,
+                )),
+          ),
+        ],
+      ),
     );
   }
 }

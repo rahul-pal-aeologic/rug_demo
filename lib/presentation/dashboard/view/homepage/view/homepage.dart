@@ -32,7 +32,7 @@ class _HomepageState extends State<Homepage> {
         showAppbar: false,
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -80,10 +80,10 @@ class _HomepageState extends State<Homepage> {
                       itemCount: staticRugs.length,
                       shrinkWrap: true,
                       gridDelegate:
-                          const SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisSpacing: 8,
-                              childAspectRatio: 12/13,
-                              mainAxisSpacing: 8,
+                           const SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisSpacing: 10,
+                              mainAxisSpacing: 10,
+                              childAspectRatio: 459 / 474,
                               crossAxisCount: 2),
                       itemBuilder: (BuildContext context, int index) {
                         return Center(

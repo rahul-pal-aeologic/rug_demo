@@ -120,7 +120,7 @@ class CustomTextField extends StatelessWidget {
             border: Border.all(color: Colors.grey, width: 2),
           ),
           child: Padding(
-            padding: const EdgeInsets.all(8),
+            padding: const EdgeInsets.only(top:8, left: 8, bottom: 8),
             child: FocusScope(
               child: Focus(
                 onFocusChange: (focus) {

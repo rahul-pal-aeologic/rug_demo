@@ -25,28 +25,37 @@ class _FilteredRugsState extends State<FilteredRugs> {
           Column(
             children: [
               TextButton(
-                  onPressed: () {
-                    context.pop();
-                  },
-                  child: Text('Clear Filter',
-                      style: AppStyles.smallBoldTextWithUnderline(
-                          AppColors.primaryColor,
-                          size: 20))),
+                onPressed: () {
+                  context.pop();
+                },
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 8.0),
+                  child: Text(
+                    'Clear Filter',
+                    style: AppStyles.smallBoldTextWithUnderline(
+                        AppColors.primaryColor,
+                        size: 20),
+                  ),
+                ),
+              ),
             ],
           )
         ],
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: Column(
               children: [
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    _FilterByBox(title: 'Fractal Kusat', moreThan2: true),
-                    _FilterByBox(title: 'Floral, City', moreThan2: true),
-                    _FilterByBox(title: 'Red, Black', moreThan2: true),
-                  ],
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 8.0),
+                  child: const Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      _FilterByBox(title: 'Fractal Kusat', moreThan2: true),
+                      _FilterByBox(title: 'Floral, City', moreThan2: true),
+                      _FilterByBox(title: 'Red, Black', moreThan2: true),
+                    ],
+                  ),
                 ),
                 SizedBox(
                   // color: Colors.orange,
@@ -57,8 +66,9 @@ class _FilteredRugsState extends State<FilteredRugs> {
                       shrinkWrap: true,
                       gridDelegate:
                           const SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisSpacing: 8,
-                              childAspectRatio: 1,
+                              crossAxisSpacing: 10,
+                              mainAxisSpacing: 10,
+                              childAspectRatio: 459 / 474,
                               crossAxisCount: 2),
                       itemBuilder: (BuildContext context, int index) {
                         return Center(
@@ -92,7 +102,7 @@ class _FilterByBox extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        border: Border.all(width: 2, color: AppColors.textColor2),
+        border: Border.all(width: 2, color: AppColors.textColor3),
       ),
       padding: const EdgeInsets.all(10),
       child: !moreThan2
