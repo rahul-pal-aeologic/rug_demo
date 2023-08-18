@@ -8,9 +8,11 @@ class SecondaryButton extends StatelessWidget {
   final bool? disable;
   final IconData? iconName;
   final double? width;
+  final double? height;
   const SecondaryButton(
       {super.key,
       required this.label,
+      this.height,
       this.onPressed,
       this.disable,
       this.iconName,
@@ -19,7 +21,7 @@ class SecondaryButton extends StatelessWidget {
   @override
   Widget build(context) {
     return SizedBox(
-      height: 80,
+      height:height ??80,
       width: width,
       child: ElevatedButton(
           style: ElevatedButton.styleFrom(
