@@ -282,6 +282,7 @@ class AppStyles {
         color: color,
         fontSize: _largeFontSize,
         fontWeight: FontWeight.bold,
+        overflow: TextOverflow.ellipsis,
         fontFamily: 'Axiforma');
   }
 

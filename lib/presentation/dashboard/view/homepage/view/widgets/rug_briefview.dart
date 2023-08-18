@@ -30,7 +30,8 @@ class RugBriefViewWidget extends StatelessWidget {
         child: Stack(
           children: [
             Column(
-              // mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
               children: [
                 ClipRRect(
@@ -41,17 +42,23 @@ class RugBriefViewWidget extends StatelessWidget {
                       imageUrl: image,
                       fit: BoxFit.cover),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 8.0, right: 8, top: 5),
-                  child: Row(
-                    children: [
-                      Text(
-                        name,
-                        style: AppStyles.largeBoldTextWithColor(Colors.black),
-                      ),
-                    ],
-                  ),
-                ),
+                // Padding(
+                //   padding: const EdgeInsets.only(left: 8.0, right: 8, top: 5),
+                //   child: SizedBox(width: 21,
+                //     child: Row(mainAxisAlignment: MainAxisAlignment.start,mainAxisSize: MainAxisSize.min,
+                //       children: [
+                       
+                //       ],
+                //     ),
+                //   ),
+                // ),
+                 Padding(
+                   padding: const EdgeInsets.symmetric(horizontal :8.0),
+                   child: Text(
+                            name,
+                            style: AppStyles.largeBoldTextWithColor(Colors.black,),
+                          ),
+                 ),
                 Flexible(
                   child: Padding(
                     padding:
