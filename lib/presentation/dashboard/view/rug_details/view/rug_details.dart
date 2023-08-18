@@ -47,7 +47,7 @@ class _RugDetailsState extends State<RugDetails> {
                     Positioned(
                       bottom: 10,
                       child: PrimaryButton(
-                        width: MediaQuery.of(context).size.width / 2,
+                        width: MediaQuery.of(context).size.width / 1.8,
                         height: 56,
                         label: "",
                         label2: "Design your Own Rug",
@@ -147,17 +147,20 @@ class _RugDetailsState extends State<RugDetails> {
                         ],
                       ),
                       normalSpacer,
-                      Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-
-                          Row(children: [  Text(
-                            'Color',
-                            style: AppStyles.regularBoldTextWithColor(
-                                Colors.black),
+                          Row(
+                            children: [
+                              Text(
+                                'Color',
+                                style: AppStyles.regularBoldTextWithColor(
+                                    Colors.black),
+                              ),
+                              ColorSelector(
+                                  list: colorsForRug, onSelect: (value) {}),
+                            ],
                           ),
-                          ColorSelector(
-                              list: colorsForRug, onSelect: (value) {}),],),
-                        
                           _AddQuantityWidget()
                         ],
                       ),
