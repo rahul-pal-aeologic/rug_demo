@@ -36,7 +36,7 @@ class RugBriefViewWidget extends StatelessWidget {
                 ClipRRect(
                   borderRadius: BorderRadius.circular(20),
                   child: CachedNetworkImage(
-                      height: 100,
+                      height: 125,
                       width: 200,
                       imageUrl: image,
                       fit: BoxFit.cover),
@@ -47,7 +47,7 @@ class RugBriefViewWidget extends StatelessWidget {
                     children: [
                       Text(
                         name,
-                        style: AppStyles.regularBoldTextWithColor(Colors.black),
+                        style: AppStyles.largeBoldTextWithColor(Colors.black),
                       ),
                     ],
                   ),
