@@ -51,7 +51,7 @@ class _FilterScreenState extends State<FilterScreen> {
             ),
             Divider(
               thickness: 1,
-              color: Colors.black.withOpacity(.5),
+              color: Colors.grey.withOpacity(.5),
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -153,11 +153,31 @@ class _FilterScreenState extends State<FilterScreen> {
                     ),
                   ],
                 ),
-                FilterSelection(
-                    list: filterList,
-                    onSelect: (value) {
-                      print(value?.filterName);
-                    }),
+                Column(
+                  children: [
+                    FilterSelection(
+                        list: filterList,
+                        onSelect: (value) {
+                          print(value?.filterName);
+                        }),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 420, left: 30),
+                      child: SizedBox(
+                        width: 180,
+                        height: 60,
+                        child: PrimaryButton(
+                          label: "",
+                          label2: "Apply Filter",
+                          onPressed: () {
+                            context.pushNamed(FilteredRugs.routeName);
+                          },
+                          color: AppColors.primaryColor,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+
                 // Column(
                 //   crossAxisAlignment: CrossAxisAlignment.start,
                 //   children: [

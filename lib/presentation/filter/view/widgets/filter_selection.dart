@@ -41,7 +41,7 @@ class _FilterSelectionState extends State<FilterSelection> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(
-                    width: 30,
+                    width: 20,
                     child: Image.asset(
                       (selected == widget.list[i])
                           ? "assets/bluecircle.png"
@@ -51,7 +51,7 @@ class _FilterSelectionState extends State<FilterSelection> {
                     ),
                   ),
                   const SizedBox(
-                    width: 30,
+                    width: 20,
                   ),
                   Text(
                     widget.list[i].filterName,
