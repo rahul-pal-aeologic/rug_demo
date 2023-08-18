@@ -55,12 +55,13 @@ class _DesignRugState extends State<DesignRug> {
                 'Select Rug Material',
                 style: AppStyles.normalBoldTextWithColor(Colors.black),
               ),
-              normalSpacer,
+              minimumSpacer,
               MaterialSelector(
                 images: [
                   staticRugs[9].image,
                   staticRugs[1].image,
                   staticRugs[0].image,
+                  staticRugs[13].image,
                   staticRugs[6].image,
                 ],
                 onSelect: (v) {},
@@ -73,6 +74,8 @@ class _DesignRugState extends State<DesignRug> {
                   Flexible(
                     child: SecondaryButton(
                       label: 'Preview Design',
+                      height: 56,
+                      
                       onPressed: () {},
                     ),
                   ),
@@ -154,7 +157,7 @@ class _UploadPictureState extends State<_UploadPicture> {
           height: 200,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(14),
-              color: AppColors.primaryColor.withAlpha(100)),
+              color: AppColors.primaryColor.withAlpha(60)),
           child: Column(
             children: [
               SvgPicture.asset(
@@ -179,8 +182,7 @@ class _UploadPictureState extends State<_UploadPicture> {
               _checkPermission(context);
             },
             color: AppColors.primaryColor,
-            height: 50,
-            width: 200,
+            height: 30,
           ),
         )
       ],
