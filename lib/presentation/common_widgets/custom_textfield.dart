@@ -39,6 +39,8 @@ class CustomTextField extends StatelessWidget {
   final double? height;
   final int? maxLength;
   final Color? boxColor;
+  final void Function()? onPressed;
+  final bool? disable;
 
   List<TextInputFormatter>? inputFormatters;
 
@@ -74,6 +76,8 @@ class CustomTextField extends StatelessWidget {
     this.hintColor,
     this.height,
     this.boxColor = AppColors.mainBackgroundColor,
+    this.onPressed,
+    this.disable,
   });
 
   @override
@@ -182,11 +186,14 @@ class CustomTextField extends StatelessWidget {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(left: 10, right: 0),
-                      child: suffixIcon ??
-                          const SizedBox(
-                            width: 0,
-                            height: 5,
-                          ),
+                      child: InkWell(
+                        onTap: (disable ?? false) ? null : onPressed,
+                        child: suffixIcon ??
+                            const SizedBox(
+                              width: 0,
+                              height: 5,
+                            ),
+                      ),
                     )
                   ],
                 ),

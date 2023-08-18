@@ -17,6 +17,7 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController _emailCon = TextEditingController();
   final TextEditingController _passCon = TextEditingController();
+  bool _isHidden = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -107,8 +108,12 @@ class _LoginScreenState extends State<LoginScreen> {
                   textFieldController: _passCon,
                   valueDidChange: (_) {},
                   onFocusChange: (_) {},
-                  suffixIcon: const Icon(
-                    Icons.visibility_off,
+                  isObscure: _isHidden,
+                  onPressed: () {
+                    _togglePasswordView();
+                  },
+                  suffixIcon: Icon(
+                    (_isHidden ? Icons.visibility : Icons.visibility_off),
                     size: 30,
                     color: AppColors.greyColor,
                   ),
@@ -190,5 +195,11 @@ class _LoginScreenState extends State<LoginScreen> {
         ]),
       ),
     );
+  }
+
+  void _togglePasswordView() {
+    setState(() {
+      _isHidden = !_isHidden;
+    });
   }
 }
