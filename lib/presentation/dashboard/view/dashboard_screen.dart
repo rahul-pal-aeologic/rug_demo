@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:rug_demo/global/resource/app_assets.dart';
 import 'package:rug_demo/global/resource/app_colors.dart';
+import 'package:rug_demo/global/resource/app_dimensions.dart';
 import 'package:rug_demo/presentation/dashboard/cubit/bottom_navbar_cubit.dart';
 import 'package:rug_demo/presentation/dashboard/view/homepage/view/homepage.dart';
 
@@ -51,44 +54,63 @@ class BottomNavigation extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<BottomNavCubit, int>(builder: (context, screenIndex) {
       return BottomNavigationBar(
+        elevation: 50,
         backgroundColor: Colors.white,
-        items: const <BottomNavigationBarItem>[
+        items: <BottomNavigationBarItem>[
           //home
           BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined, color: AppColors.blackColor),
-            activeIcon: Icon(Icons.home, color: AppColors.primaryColor),
+            icon: const Icon(Icons.home_outlined, color: AppColors.blackColor),
+            activeIcon: SvgPicture.asset(
+              AppAssets.homeNavbar,
+              width: AppDimentions.bottomNavbarIconDimension,
+              height: AppDimentions.bottomNavbarIconDimension,
+            ),
             label: '',
             // label: 'home',
           ),
 
           //favourites
           BottomNavigationBarItem(
-            icon: Icon(Icons.favorite_border, color: AppColors.blackColor),
-            activeIcon: Icon(Icons.favorite, color: AppColors.primaryColor),
+            icon: SvgPicture.asset(
+              AppAssets.heartNavbar,
+              width: AppDimentions.bottomNavbarIconDimension,
+              height: AppDimentions.bottomNavbarIconDimension,
+            ),
+            activeIcon: const Icon(Icons.favorite, color: AppColors.primaryColor),
             label: '',
           ),
 
           //all apps
           BottomNavigationBarItem(
-            icon: Icon(Icons.browse_gallery_outlined,
-                color: AppColors.blackColor),
+            icon: SvgPicture.asset(
+              AppAssets.categoryNavbar,
+              width: AppDimentions.bottomNavbarIconDimension,
+              height: AppDimentions.bottomNavbarIconDimension,
+            ),
             activeIcon:
-                Icon(Icons.browse_gallery, color: AppColors.primaryColor),
+                const Icon(Icons.browse_gallery, color: AppColors.primaryColor),
             label: '',
           ),
           //notifications
           BottomNavigationBarItem(
-            icon:
-                Icon(Icons.notifications_outlined, color: AppColors.blackColor),
+            icon: SvgPicture.asset(
+              AppAssets.notification,
+              width: AppDimentions.bottomNavbarIconDimension,
+              height: AppDimentions.bottomNavbarIconDimension,
+            ),
             activeIcon:
-                Icon(Icons.notifications, color: AppColors.primaryColor),
+                const Icon(Icons.notifications, color: AppColors.primaryColor),
             label: '',
             // label: 'home',
           ),
           //settings
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings_outlined, color: AppColors.blackColor),
-            activeIcon: Icon(Icons.settings, color: AppColors.primaryColor),
+            icon: SvgPicture.asset(
+              AppAssets.setting,
+              width: AppDimentions.bottomNavbarIconDimension,
+              height: AppDimentions.bottomNavbarIconDimension,
+            ),
+            activeIcon: const Icon(Icons.settings, color: AppColors.primaryColor),
             label: '',
           ),
         ],

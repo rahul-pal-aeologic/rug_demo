@@ -39,7 +39,7 @@ class _DesignRugState extends State<DesignRug> {
               style: AppStyles.normalBoldTextWithColor(Colors.black),
             ),
             minimumSpacer,
-            _UploadPicture(),
+            const _UploadPicture(),
             minimumSpacer,
             Text(
               'Select Rug Shape',
@@ -47,16 +47,16 @@ class _DesignRugState extends State<DesignRug> {
             ),
             ShapeSelector(list: shapesForRugs, onSelect: (v) {}),
             minimumSpacer,
-            _SizeSelector(),
+            const _SizeSelector(),
             minimumSpacer,
             Text(
               'Select Rug Material',
               style: AppStyles.normalBoldTextWithColor(Colors.black),
             ),
             minimumSpacer,
-            _MaterialSelector(),
+            const _MaterialSelector(),
             minimumSpacer,
-            _PriceContainer(price: 9499),
+            const _PriceContainer(price: 9499),
             minimumSpacer,
             Row(
               children: [
@@ -85,7 +85,7 @@ class _DesignRugState extends State<DesignRug> {
 }
 
 class _UploadPicture extends StatefulWidget {
-  const _UploadPicture({super.key});
+  const _UploadPicture();
 
   @override
   State<_UploadPicture> createState() => _UploadPictureState();
@@ -137,7 +137,7 @@ class _UploadPictureState extends State<_UploadPicture> {
       alignment: Alignment.center,
       children: [
         Container(
-          padding: EdgeInsets.symmetric(horizontal: 50, vertical: 50),
+          padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 50),
           width: double.maxFinite,
           height: 200,
           decoration: BoxDecoration(
@@ -177,7 +177,7 @@ class _UploadPictureState extends State<_UploadPicture> {
 }
 
 class _SizeSelector extends StatelessWidget {
-  const _SizeSelector({super.key});
+  const _SizeSelector();
 
   @override
   Widget build(BuildContext context) {
@@ -190,7 +190,7 @@ class _SizeSelector extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Flexible(
+            const Flexible(
                 flex: 10,
                 child: Text(
                   'Select Rug Size',
@@ -199,7 +199,7 @@ class _SizeSelector extends StatelessWidget {
                       fontSize: 20,
                       fontWeight: FontWeight.bold),
                 )),
-            SizedBox(
+            const SizedBox(
               width: 50,
             ),
             Container(
@@ -213,7 +213,7 @@ class _SizeSelector extends StatelessWidget {
                   '12x14 cm',
                   style: AppStyles.regularBoldTextWithColor(Colors.black),
                 )),
-            Flexible(
+            const Flexible(
                 flex: 1,
                 child: Icon(
                   Icons.arrow_drop_down,
@@ -228,7 +228,7 @@ class _SizeSelector extends StatelessWidget {
 }
 
 class _MaterialSelector extends StatefulWidget {
-  const _MaterialSelector({super.key});
+  const _MaterialSelector();
 
   @override
   State<_MaterialSelector> createState() => __MaterialSelectorState();
@@ -255,7 +255,7 @@ class __MaterialSelectorState extends State<_MaterialSelector> {
                           width: 70,
                         )),
                   ),
-                  Text('Sample')
+                  const Text('Sample')
                 ],
               )
           ],
@@ -267,12 +267,12 @@ class __MaterialSelectorState extends State<_MaterialSelector> {
 
 class _PriceContainer extends StatelessWidget {
   final double price;
-  const _PriceContainer({super.key, required this.price});
+  const _PriceContainer({required this.price});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 25),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 25),
       decoration: BoxDecoration(
           color: AppColors.primaryColor.withAlpha(50),
           borderRadius: BorderRadius.circular(14)),
