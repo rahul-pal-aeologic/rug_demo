@@ -9,6 +9,7 @@ import 'package:rug_demo/presentation/common_widgets/custom_scaffold_layout.dart
 import 'package:rug_demo/presentation/common_widgets/custom_textfield.dart';
 import 'package:rug_demo/presentation/dashboard/view/homepage/view/widgets/rug_briefview.dart';
 import 'package:rug_demo/presentation/dashboard/view/rug_details/view/rug_details.dart';
+import 'package:rug_demo/presentation/filter/view/filter_page.dart';
 
 class Homepage extends StatefulWidget {
   static const String routeName = '/homepage';
@@ -49,10 +50,13 @@ class _HomepageState extends State<Homepage> {
                         height: 50,
                       ),
                     ),
-                    prefixIcon: SvgPicture.asset(
-                      AppAssets.filterSvg,
-                      width: 20,
-                      height: 20,
+                    prefixIcon: InkWell(
+                      onTap: () => context.pushNamed(FilterScreen.routeName),
+                      child: SvgPicture.asset(
+                        AppAssets.filterSvg,
+                        width: 20,
+                        height: 20,
+                      ),
                     ),
                     hintText: 'Search for products..',
                     textFieldController: searchController,

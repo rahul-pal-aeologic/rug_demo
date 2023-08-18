@@ -21,13 +21,14 @@ class SecondaryButton extends StatelessWidget {
   Widget build(context) {
     return SizedBox(
       height: 56,
-      // width: width ?? 200,
+      width: width,
       child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-            shadowColor: AppColors.primaryColor,
+            // shadowColor: AppColors.primaryColor,
             backgroundColor: AppColors.mainBackgroundColor,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(AppDimentions.buttonBorder),
+              side: BorderSide(color: AppColors.textColor2, width: 2),
+              borderRadius: BorderRadius.circular(14),
             ),
           ),
           onPressed: (disable ?? false) ? null : onPressed,
@@ -35,7 +36,7 @@ class SecondaryButton extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                label.toUpperCase(),
+                label,
                 style: AppStyles.mediumBoldTextWithColor(
                   ellipsis: TextOverflow.ellipsis,
                   color: (disable ?? false)

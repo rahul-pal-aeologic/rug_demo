@@ -1,9 +1,8 @@
 import 'package:go_router/go_router.dart';
 import 'package:rug_demo/main.dart';
-import 'package:rug_demo/models/rug/rug_dummy_model.dart';
 import 'package:rug_demo/presentation/dashboard/view/dashboard_screen.dart';
+import 'package:rug_demo/presentation/dashboard/view/homepage/view/homepage.dart';
 import 'package:rug_demo/presentation/filter/view/filter_page.dart';
-import 'package:rug_demo/presentation/homepage/view/homepage.dart';
 import 'package:rug_demo/presentation/login/view/login_page.dart';
 import 'package:rug_demo/presentation/onboarding/view/onboarding_page.dart';
 import 'package:rug_demo/presentation/signup/view/signup_page.dart';
