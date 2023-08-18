@@ -59,7 +59,7 @@ class BottomNavigation extends StatelessWidget {
         items: <BottomNavigationBarItem>[
           //home
           BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined, color: AppColors.blackColor),
+            icon: const Icon(Icons.home_outlined, color: AppColors.blackColor),
             activeIcon: SvgPicture.asset(
               AppAssets.homeNavbar,
               width: AppDimentions.bottomNavbarIconDimension,
@@ -76,7 +76,7 @@ class BottomNavigation extends StatelessWidget {
               width: AppDimentions.bottomNavbarIconDimension,
               height: AppDimentions.bottomNavbarIconDimension,
             ),
-            activeIcon: Icon(Icons.favorite, color: AppColors.primaryColor),
+            activeIcon: const Icon(Icons.favorite, color: AppColors.primaryColor),
             label: '',
           ),
 
@@ -88,7 +88,7 @@ class BottomNavigation extends StatelessWidget {
               height: AppDimentions.bottomNavbarIconDimension,
             ),
             activeIcon:
-                Icon(Icons.browse_gallery, color: AppColors.primaryColor),
+                const Icon(Icons.browse_gallery, color: AppColors.primaryColor),
             label: '',
           ),
           //notifications
@@ -99,7 +99,7 @@ class BottomNavigation extends StatelessWidget {
               height: AppDimentions.bottomNavbarIconDimension,
             ),
             activeIcon:
-                Icon(Icons.notifications, color: AppColors.primaryColor),
+                const Icon(Icons.notifications, color: AppColors.primaryColor),
             label: '',
             // label: 'home',
           ),
@@ -110,7 +110,7 @@ class BottomNavigation extends StatelessWidget {
               width: AppDimentions.bottomNavbarIconDimension,
               height: AppDimentions.bottomNavbarIconDimension,
             ),
-            activeIcon: Icon(Icons.settings, color: AppColors.primaryColor),
+            activeIcon: const Icon(Icons.settings, color: AppColors.primaryColor),
             label: '',
           ),
         ],

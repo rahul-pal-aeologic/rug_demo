@@ -185,7 +185,7 @@ class AppStyles {
   static TextStyle smallBoldTextWithUnderline(Color color, {double? size}) {
     return TextStyle(
         color: color,
-        fontSize: size ??_smallFontSize,
+        fontSize: size ?? _smallFontSize,
         fontWeight: FontWeight.bold,
         fontFamily: 'Axiforma-Bold',
         decoration: TextDecoration.underline);

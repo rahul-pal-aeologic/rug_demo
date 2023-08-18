@@ -29,8 +29,9 @@ class _FilteredRugsState extends State<FilteredRugs> {
                     context.pop();
                   },
                   child: Text('Clear Filter',
-                      style: AppStyles.smallBoldTextWithUnderline(AppColors.primaryColor, size: 20))),
-
+                      style: AppStyles.smallBoldTextWithUnderline(
+                          AppColors.primaryColor,
+                          size: 20))),
             ],
           )
         ],
@@ -39,7 +40,7 @@ class _FilteredRugsState extends State<FilteredRugs> {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               children: [
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     _FilterByBox(title: 'Fractal Kusat', moreThan2: true),
@@ -51,7 +52,7 @@ class _FilteredRugsState extends State<FilteredRugs> {
                   // color: Colors.orange,
                   // height: MediaQuery.of(context).size.height - 80,
                   child: GridView.builder(
-                      physics: NeverScrollableScrollPhysics(),
+                      physics: const NeverScrollableScrollPhysics(),
                       itemCount: staticRugs.length,
                       shrinkWrap: true,
                       gridDelegate:
@@ -84,7 +85,7 @@ class _FilteredRugsState extends State<FilteredRugs> {
 class _FilterByBox extends StatelessWidget {
   final String title;
   final bool moreThan2;
-  const _FilterByBox({super.key, required this.title, required this.moreThan2});
+  const _FilterByBox({required this.title, required this.moreThan2});
 
   @override
   Widget build(BuildContext context) {
@@ -93,7 +94,7 @@ class _FilterByBox extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
         border: Border.all(width: 2, color: AppColors.textColor2),
       ),
-      padding: EdgeInsets.all(10),
+      padding: const EdgeInsets.all(10),
       child: !moreThan2
           ? Text(title)
           : Text.rich(

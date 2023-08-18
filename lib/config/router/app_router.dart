@@ -65,14 +65,14 @@ final GoRouter router = GoRouter(
       name: DesignRug.routeName,
       path: DesignRug.routeName,
       builder: (context, state) {
-        return DesignRug();
+        return const DesignRug();
       },
     ),
     GoRoute(
       name: FilteredRugs.routeName,
       path: FilteredRugs.routeName,
       builder: (context, state) {
-        return FilteredRugs();
+        return const FilteredRugs();
       },
     ),
   ],

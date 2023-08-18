@@ -185,7 +185,7 @@ class _FilterScreenState extends State<FilterScreen> {
                           label: "",
                           label2: "Apply Filter",
                           onPressed: () {
-                           context.pushNamed(FilteredRugs.routeName);
+                            context.pushNamed(FilteredRugs.routeName);
                           },
                           color: AppColors.primaryColor,
                         ),
