@@ -51,7 +51,7 @@ class _HomepageState extends State<Homepage> {
                       ),
                     ),
                     prefixIcon: InkWell(
-                      onTap: ()=>context.pushNamed(FilterScreen.routeName),
+                      onTap: () => context.pushNamed(FilterScreen.routeName),
                       child: SvgPicture.asset(
                         AppAssets.filterSvg,
                         width: 20,

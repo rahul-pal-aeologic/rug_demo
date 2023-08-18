@@ -42,7 +42,7 @@ List<ShapeModel> shapesForRugs = [
     ),
   ),
   ShapeModel(
-    width:40,
+    width: 40,
     height: 30,
     name: 'square',
     boxDecoration: BoxDecoration(

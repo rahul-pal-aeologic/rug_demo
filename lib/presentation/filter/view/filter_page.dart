@@ -116,8 +116,8 @@ class _FilterScreenState extends State<FilterScreen> {
                                 ),
                               ),
                               Padding(
-                                padding:
-                                    EdgeInsets.only(left: 15, right: 12, top: 8),
+                                padding: EdgeInsets.only(
+                                    left: 15, right: 12, top: 8),
                                 child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,

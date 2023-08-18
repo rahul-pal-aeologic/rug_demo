@@ -42,7 +42,7 @@ class _ShapeSelectorState extends State<ShapeSelector> {
                     margin: const EdgeInsets.all(4),
                     padding: const EdgeInsets.all(AppDimentions.px12),
                     decoration: BoxDecoration(
-                        color:  AppColors.primaryColor.withAlpha(50),
+                        color: AppColors.primaryColor.withAlpha(50),
                         border: Border.all(
                           color: (selected == widget.list[i])
                               ? AppColors.primaryColor
@@ -58,8 +58,7 @@ class _ShapeSelectorState extends State<ShapeSelector> {
                         ),
                       ],
                     )),
-                    
-                    Text(widget.list[i].name)
+                Text(widget.list[i].name)
               ],
             ),
           )
