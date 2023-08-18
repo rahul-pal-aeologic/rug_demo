@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:rug_demo/global/resource/app_colors.dart';
+import 'package:rug_demo/presentation/common_widgets/custom_scaffold_layout.dart';
 import 'package:rug_demo/presentation/common_widgets/primary_button.dart';
 
 class FilterScreen extends StatefulWidget {
@@ -14,8 +15,9 @@ class FilterScreen extends StatefulWidget {
 class _FilterScreenState extends State<FilterScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
+    return CustomScaffoldLayout(
+      showAppbar: false,
+      child: SingleChildScrollView(
         child: Column(
           children: [
             Padding(
