@@ -29,7 +29,7 @@ List<ShapeModel> shapesForRugs = [
     name: 'RoundSquare',
     boxDecoration: BoxDecoration(
       color: AppColors.primaryColor,
-      borderRadius: BorderRadius.circular(12),
+      borderRadius: BorderRadius.circular(6),
     ),
   ),
   ShapeModel(
@@ -47,7 +47,7 @@ List<ShapeModel> shapesForRugs = [
     name: 'square',
     boxDecoration: BoxDecoration(
       color: AppColors.primaryColor,
-      borderRadius: BorderRadius.circular(0),
+      borderRadius: BorderRadius.circular(6),
     ),
   ),
   ShapeModel(
@@ -56,7 +56,7 @@ List<ShapeModel> shapesForRugs = [
     name: 'square',
     boxDecoration: BoxDecoration(
       color: AppColors.primaryColor,
-      borderRadius: BorderRadius.circular(0),
+      borderRadius: BorderRadius.circular(6),
     ),
   ),
 ];
