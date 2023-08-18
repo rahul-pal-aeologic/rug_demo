@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:rug_demo/global/resource/app_colors.dart';
-import 'package:rug_demo/global/resource/app_dimensions.dart';
 import 'package:rug_demo/global/resource/app_styles.dart';
 
 class SecondaryButton extends StatelessWidget {
@@ -27,7 +26,7 @@ class SecondaryButton extends StatelessWidget {
             // shadowColor: AppColors.primaryColor,
             backgroundColor: AppColors.mainBackgroundColor,
             shape: RoundedRectangleBorder(
-              side: BorderSide(color: AppColors.textColor2, width: 2),
+              side: const BorderSide(color: AppColors.textColor2, width: 2),
               borderRadius: BorderRadius.circular(14),
             ),
           ),

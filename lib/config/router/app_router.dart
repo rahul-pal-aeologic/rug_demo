@@ -6,6 +6,7 @@ import 'package:rug_demo/presentation/dashboard/view/homepage/view/homepage.dart
 import 'package:rug_demo/presentation/dashboard/view/rug_details/view/rug_details.dart';
 import 'package:rug_demo/presentation/design_rug/view/design_rug.dart';
 import 'package:rug_demo/presentation/filter/view/filter_page.dart';
+import 'package:rug_demo/presentation/filtered_rugs/view/filtered_rugs.dart';
 import 'package:rug_demo/presentation/login/view/login_page.dart';
 import 'package:rug_demo/presentation/onboarding/view/onboarding_page.dart';
 import 'package:rug_demo/presentation/signup/view/signup_page.dart';
@@ -55,15 +56,23 @@ final GoRouter router = GoRouter(
       path: RugDetails.routeName,
       builder: (context, state) {
         RugDummyModel rug = state.extra as RugDummyModel;
-        return RugDetails(rug: rug,);
+        return RugDetails(
+          rug: rug,
+        );
       },
     ),
     GoRoute(
       name: DesignRug.routeName,
       path: DesignRug.routeName,
       builder: (context, state) {
-        
-        return DesignRug();
+        return const DesignRug();
+      },
+    ),
+    GoRoute(
+      name: FilteredRugs.routeName,
+      path: FilteredRugs.routeName,
+      builder: (context, state) {
+        return const FilteredRugs();
       },
     ),
   ],
