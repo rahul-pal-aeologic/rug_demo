@@ -62,7 +62,7 @@ class _FilterScreenState extends State<FilterScreen> {
                       child: Row(
                         children: [
                           Text(
-                            "DESIGINERS",
+                            "DESIGNERS",
                             textAlign: TextAlign.start,
                             style: TextStyle(
                                 color: AppColors.blackColor,
@@ -70,7 +70,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                 fontWeight: FontWeight.w800),
                           ),
                           SizedBox(
-                            width: 42,
+                            width: 44,
                           ),
                           Text(
                             "3",

@@ -113,7 +113,7 @@ class CustomTextField extends StatelessWidget {
           decoration: BoxDecoration(
             color: boxColor,
             borderRadius: BorderRadius.circular(14),
-            border: Border.all(color: Colors.grey, width: 2),
+            border: Border.all(color: Colors.grey, width: 1),
           ),
           child: Padding(
             padding: const EdgeInsets.all(8),
@@ -152,11 +152,16 @@ class CustomTextField extends StatelessWidget {
                         controller: textFieldController,
                         obscureText: isObscure,
                         focusNode: currentFocusNode,
-                        style: AppStyles.regularTextWithColor(
-                            color: AppColors.textColor1,
-                            textOverflow: TextOverflow.ellipsis),
+
+                        style: TextStyle(fontSize: 28),
+
+                        // style: AppStyles.regularTextWithColor(
+                        //     color: AppColors.textColor1,
+                        //     textOverflow: TextOverflow.ellipsis),
                         decoration: InputDecoration(
-                          hintText: hintText,
+                          // hintText: hintText,
+                          labelText: hintText,
+                          labelStyle: AppStyles.headerStyleMonst,
 
                           // suffix: Padding(
                           //   padding: EdgeInsets.only(left: 10, right: 10),

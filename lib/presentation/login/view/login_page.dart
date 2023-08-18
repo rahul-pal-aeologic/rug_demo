@@ -142,12 +142,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 const Padding(
                   padding: EdgeInsets.only(left: 230, top: 10),
                   child: Text(
-                    " Forget Password ?",
+                    " Forgot Password ?",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         color: AppColors.blackColor,
                         fontSize: 15,
-                        fontWeight: FontWeight.w900),
+                        fontWeight: FontWeight.w800),
                   ),
                 ),
                 Padding(

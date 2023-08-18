@@ -124,7 +124,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     label: "",
                     label2: "Signup",
                     onPressed: () {},
-                    color: AppColors.primaryColor,
+                    color: AppColors.selectedItemColor,
                   ),
                 ),
                 Padding(
@@ -142,7 +142,7 @@ class _SignupScreenState extends State<SignupScreen> {
                         ),
                       );
                     },
-                    color: AppColors.selectedItemColor,
+                    color: AppColors.primaryColor,
                   ),
                 ),
               ],
