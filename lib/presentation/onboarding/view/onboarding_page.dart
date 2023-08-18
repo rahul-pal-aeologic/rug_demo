@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:rug_demo/global/resource/app_colors.dart';
 import 'package:rug_demo/presentation/common_widgets/primary_button.dart';
+import 'package:rug_demo/presentation/common_widgets/secondary_button.dart';
 import 'package:rug_demo/presentation/login/view/login_page.dart';
 import 'package:rug_demo/presentation/signup/view/signup_page.dart';
 
@@ -90,16 +91,20 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   color: AppColors.selectedItemColor,
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 5, bottom: 10),
-                child: PrimaryButton(
-                  label: "",
-                  label2: "Login with Social",
-                  textColor2: Colors.black,
-                  onPressed: () {},
-                  color: AppColors.whiteColor,
-                ),
-              ),
+              // Padding(
+              //   padding: const EdgeInsets.only(top: 5, bottom: 10),
+              //   child: PrimaryButton(
+              //     label: "",
+              //     label2: "Login with Social",
+              //     textColor2: Colors.black,
+              //     onPressed: () {},
+              //     color: AppColors.whiteColor,
+              //   ),
+              // ),
+              SecondaryButton(
+                label: "Login with Social",
+                onPressed: () {},
+              )
             ],
           ),
         ),
