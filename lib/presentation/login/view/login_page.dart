@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:rug_demo/global/resource/app_colors.dart';
+import 'package:rug_demo/presentation/common_widgets/custom_textfield.dart';
 import 'package:rug_demo/presentation/common_widgets/primary_button.dart';
 import 'package:rug_demo/presentation/dashboard/view/dashboard_screen.dart';
 import 'package:rug_demo/presentation/signup/view/signup_page.dart';
@@ -14,6 +15,8 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  final TextEditingController _emailCon = TextEditingController();
+  final TextEditingController _passCon = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,80 +57,97 @@ class _LoginScreenState extends State<LoginScreen> {
                         fontWeight: FontWeight.w500),
                   ),
                 ),
-                Container(
+                // Container(
+                //   height: 80,
+                //   width: 500,
+                //   decoration: BoxDecoration(
+                //       border: Border.all(color: Colors.grey.shade500, width: 2),
+                //       color: Colors.grey[300],
+                //       borderRadius: BorderRadius.circular(20)),
+                //   child: const Padding(
+                //     padding: EdgeInsets.all(12.0),
+                //     child: Column(
+                //       crossAxisAlignment: CrossAxisAlignment.start,
+                //       children: [
+                //         Text(
+                //           "Email",
+                //           textAlign: TextAlign.center,
+                //           style: TextStyle(
+                //               color: AppColors.greyColor,
+                //               fontSize: 15,
+                //               fontWeight: FontWeight.w500),
+                //         ),
+                //         Text(
+                //           "Starkjohn21@gmail.com",
+                //           textAlign: TextAlign.center,
+                //           style: TextStyle(
+                //               color: AppColors.blackColor,
+                //               fontSize: 23,
+                //               fontWeight: FontWeight.w500),
+                //         ),
+                //       ],
+                //     ),
+                //   ),
+                // ),
+                CustomTextField(
                   height: 80,
-                  width: 500,
-                  decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey.shade500, width: 2),
-                      color: Colors.grey[300],
-                      borderRadius: BorderRadius.circular(20)),
-                  child: const Padding(
-                    padding: EdgeInsets.all(12.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Email",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              color: AppColors.greyColor,
-                              fontSize: 15,
-                              fontWeight: FontWeight.w500),
-                        ),
-                        Text(
-                          "Starkjohn21@gmail.com",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              color: AppColors.blackColor,
-                              fontSize: 23,
-                              fontWeight: FontWeight.w500),
-                        ),
-                      ],
-                    ),
-                  ),
+                  hintText: "Email",
+                  boxColor: Colors.grey[300],
+                  textFieldController: _emailCon,
+                  valueDidChange: (_) {},
+                  onFocusChange: (_) {},
                 ),
                 const SizedBox(
                   height: 10,
                 ),
-                Container(
+                CustomTextField(
                   height: 80,
-                  width: 500,
-                  decoration: BoxDecoration(
-                      // border: Border.all(color: Colors.grey.shade500, width: 2),
-                      color: Colors.grey[300],
-                      borderRadius: BorderRadius.circular(20)),
-                  child: const Padding(
-                    padding: EdgeInsets.all(25.0),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "Password",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              color: AppColors.greyColor,
-                              fontSize: 23,
-                              fontWeight: FontWeight.w500),
-                        ),
-                        Icon(
-                          Icons.visibility_off,
-                          size: 30,
-                          color: AppColors.greyColor,
-                        )
-                      ],
-                    ),
-                  ),
+                  hintText: "Password",
+                  boxColor: Colors.grey[300],
+                  textFieldController: _passCon,
+                  valueDidChange: (_) {},
+                  onFocusChange: (_) {},
                 ),
+
+                // Container(
+                //   height: 80,
+                //   width: 500,
+                //   decoration: BoxDecoration(
+                //       // border: Border.all(color: Colors.grey.shade500, width: 2),
+                //       color: Colors.grey[300],
+                //       borderRadius: BorderRadius.circular(20)),
+                //   child: const Padding(
+                //     padding: EdgeInsets.all(25.0),
+                //     child: Row(
+                //       crossAxisAlignment: CrossAxisAlignment.start,
+                //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //       children: [
+                //         Text(
+                //           "Password",
+                //           textAlign: TextAlign.center,
+                //           style: TextStyle(
+                //               color: AppColors.greyColor,
+                //               fontSize: 23,
+                //               fontWeight: FontWeight.w500),
+                //         ),
+                //         Icon(
+                //           Icons.visibility_off,
+                //           size: 30,
+                //           color: AppColors.greyColor,
+                //         )
+                //       ],
+                //     ),
+                //   ),
+                // ),
                 const Padding(
                   padding: EdgeInsets.only(left: 230, top: 10),
                   child: Text(
-                    " Forget Password ?",
+                    " Forgot Password ?",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         color: AppColors.blackColor,
                         fontSize: 15,
-                        fontWeight: FontWeight.w900),
+                        fontWeight: FontWeight.w800),
                   ),
                 ),
                 Padding(
