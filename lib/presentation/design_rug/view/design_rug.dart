@@ -31,7 +31,7 @@ class _DesignRugState extends State<DesignRug> {
       showAppbar: true,
       appbarTitle: 'Design your Own Rug',
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+        padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

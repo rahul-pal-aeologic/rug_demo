@@ -11,7 +11,7 @@ class AppStyles {
   static const _firstLargeFontSize = 22.0;
   static const _normalFontSize = 18.0;
   static const _secondLargeFontSize = 24.0;
-  static const _largeFontSize = 26.0;
+  static const _largeFontSize = 20.0;
   static const _extraLargeFontSize = 36.0;
   static const _extraLargeFontSizeforty = 40.0;
   static const _sizeWith15Pixels = 15.0;
@@ -20,65 +20,65 @@ class AppStyles {
   static const TextStyle headerStyle = TextStyle(
       color: AppColors.titleColor,
       fontSize: AppDimentions.px16,
-      fontFamily: 'Axiforma',
+      fontFamily: 'Axiforma-Thin',
       fontWeight: FontWeight.w400);
   static const TextStyle textFieldHintStyle = TextStyle(
       color: AppColors.hintColor,
       fontSize: AppDimentions.px16,
-      fontFamily: 'Axiforma',
+      fontFamily: 'Axiforma-Thin',
       fontWeight: FontWeight.w400);
   static const TextStyle headerStyleMonst = TextStyle(
       color: AppColors.titleColor,
       fontSize: AppDimentions.px20,
-      fontFamily: 'Axiforma',
+      fontFamily: 'Axiforma-Thin',
       fontWeight: FontWeight.w400);
   static const TextStyle headerStyleMonst500 = TextStyle(
       color: AppColors.primaryColor,
       fontSize: AppDimentions.px18,
-      fontFamily: 'Axiforma',
+      fontFamily: 'Axiforma-Thin',
       fontWeight: FontWeight.w500);
   static const TextStyle largeHeaderStyle = TextStyle(
       color: AppColors.titleColor,
       fontSize: AppDimentions.px25,
-      fontFamily: 'Axiforma',
+      fontFamily: 'Axiforma-Thin',
       fontWeight: FontWeight.w400);
   static const TextStyle largeHeaderStyle20px = TextStyle(
       color: AppColors.primaryColor,
       fontSize: AppDimentions.px20,
-      fontFamily: 'Axiforma',
+      fontFamily: 'Axiforma-Thin',
       fontWeight: FontWeight.w400);
   static const TextStyle buttonStyle = TextStyle(
       color: AppColors.titleColor,
       fontSize: AppDimentions.px14,
-      fontFamily: 'Axiforma',
+      fontFamily: 'Axiforma-Thin',
       fontWeight: FontWeight.bold);
   static const TextStyle lightBlue15W = TextStyle(
       color: AppColors.insideFormColor,
       fontSize: AppDimentions.px15,
       fontWeight: FontWeight.w600,
-      fontFamily: 'Axiforma');
+      fontFamily: 'Axiforma-Thin');
   static const TextStyle title15W600 = TextStyle(
       color: AppColors.insideFormColor,
       fontSize: AppDimentions.px15,
       fontWeight: FontWeight.w600,
-      fontFamily: 'Axiforma');
+      fontFamily: 'Axiforma-Thin');
   static const TextStyle title15W600underline = TextStyle(
       color: AppColors.insideFormColor,
       fontSize: AppDimentions.px15,
       decoration: TextDecoration.underline,
       decorationStyle: TextDecorationStyle.solid,
       fontWeight: FontWeight.w600,
-      fontFamily: 'Axiforma');
+      fontFamily: 'Axiforma-Thin');
   static const TextStyle title15W400 = TextStyle(
       color: AppColors.insideFormColor,
       fontSize: AppDimentions.px15,
       fontWeight: FontWeight.w400,
-      fontFamily: 'Axiforma');
+      fontFamily: 'Axiforma-Thin');
   static const TextStyle lightBlue15W600 = TextStyle(
       color: AppColors.titleColor,
       fontSize: AppDimentions.px15,
       fontWeight: FontWeight.w400,
-      fontFamily: 'Axiforma');
+      fontFamily: 'Axiforma-Thin');
   //-------------------Font Styles---------------------------------//
 
   static TextStyle mediumBoldTextWithColor(
@@ -89,7 +89,7 @@ class AppStyles {
         color: color,
         fontSize: _mediumFontSize,
         fontWeight: FontWeight.bold,
-        fontFamily: 'Axiforma-Bold',
+        fontFamily: 'Axiforma-Thin-Bold',
         overflow: overflow);
   }
 
@@ -107,7 +107,7 @@ class AppStyles {
         color: color,
         fontSize: _mediumFontSize,
         fontWeight: FontWeight.w300,
-        fontFamily: 'Axiforma',
+        fontFamily: 'Axiforma-Thin',
         overflow: overflow);
   }
 
@@ -117,7 +117,7 @@ class AppStyles {
         color: color,
         fontSize: _mediumFontSize,
         fontWeight: FontWeight.w400,
-        fontFamily: 'Axiforma',
+        fontFamily: 'Axiforma-Thin',
         overflow: overflow);
   }
 
@@ -126,7 +126,7 @@ class AppStyles {
         color: color,
         fontSize: _secondLargeFontSize,
         fontWeight: FontWeight.bold,
-        fontFamily: 'Axiforma-Bold');
+        fontFamily: 'Axiforma-Thin-Bold');
   }
 
   static TextStyle normalBoldTextWithColor(Color color) {
@@ -134,7 +134,7 @@ class AppStyles {
         color: color,
         fontSize: _normalFontSize,
         fontWeight: FontWeight.bold,
-        fontFamily: 'Axiforma');
+        fontFamily: 'Axiforma-Thin');
   }
 
   static TextStyle normalTextWithColor(Color color) {
@@ -142,7 +142,7 @@ class AppStyles {
         color: color,
         fontSize: _normalFontSize,
         fontWeight: FontWeight.w300,
-        fontFamily: 'Axiforma-Regular');
+        fontFamily: 'Axiforma-Thin-Regular');
   }
 
   static TextStyle normalBasicTextWithColor(Color color) {
@@ -150,7 +150,7 @@ class AppStyles {
         color: color,
         fontSize: _normalFontSize,
         fontWeight: FontWeight.w500,
-        fontFamily: 'Axiforma');
+        fontFamily: 'Axiforma-Thin');
   }
 
   static TextStyle sizeWith20PixelsBoldTextWithColor(Color color,
@@ -159,7 +159,7 @@ class AppStyles {
         color: color,
         fontSize: _sizeWith20Pixels,
         fontWeight: FontWeight.bold,
-        fontFamily: 'Axiforma',
+        fontFamily: 'Axiforma-Thin',
         overflow: textOverflow);
   }
 
@@ -171,7 +171,7 @@ class AppStyles {
         color: color,
         fontSize: _smallFontSize,
         fontWeight: FontWeight.normal,
-        fontFamily: 'Axiforma-Regular');
+        fontFamily: 'Axiforma-Thin-Regular');
   }
 
   static TextStyle smallBoldTextWithColor(Color color) {
@@ -179,7 +179,7 @@ class AppStyles {
         color: color,
         fontSize: _smallFontSize,
         fontWeight: FontWeight.bold,
-        fontFamily: 'Axiforma');
+        fontFamily: 'Axiforma-Thin');
   }
 
   static TextStyle smallBoldTextWithUnderline(Color color, {double? size}) {
@@ -187,7 +187,7 @@ class AppStyles {
         color: color,
         fontSize: size ?? _smallFontSize,
         fontWeight: FontWeight.bold,
-        fontFamily: 'Axiforma-Bold',
+        fontFamily: 'Axiforma-Thin-Bold',
         decoration: TextDecoration.underline);
   }
 
@@ -208,7 +208,7 @@ class AppStyles {
         color: color,
         fontSize: _regularFontSize,
         fontWeight: FontWeight.normal,
-        fontFamily: 'Axiforma',
+        fontFamily: 'Axiforma-Thin',
         overflow: textOverflow);
   }
 
@@ -217,7 +217,7 @@ class AppStyles {
         color: color,
         fontSize: _regularFontSize,
         fontWeight: FontWeight.w500,
-        fontFamily: 'Axiforma');
+        fontFamily: 'Axiforma-Thin');
   }
 
   static TextStyle regularBoldTextWithColor(Color color,
@@ -226,7 +226,7 @@ class AppStyles {
         color: color,
         fontSize: _regularFontSize,
         fontWeight: FontWeight.bold,
-        fontFamily: 'Axiforma',
+        fontFamily: 'Axiforma-Thin',
         overflow: textOverflow);
   }
 
@@ -236,7 +236,7 @@ class AppStyles {
         color: color,
         fontSize: _regularFontSize,
         fontWeight: fontWeight,
-        fontFamily: 'Axiforma',
+        fontFamily: 'Axiforma-Thin',
         overflow: textOverflow);
   }
 
@@ -246,7 +246,7 @@ class AppStyles {
         color: color,
         fontSize: _regularFontSize,
         fontWeight: fontWeight,
-        fontFamily: 'Axiforma',
+        fontFamily: 'Axiforma-Thin',
         overflow: textOverflow);
   }
 
@@ -255,7 +255,7 @@ class AppStyles {
         color: color,
         fontSize: _regularFontSize,
         fontWeight: FontWeight.w300,
-        fontFamily: 'Axiforma-Light');
+        fontFamily: 'Axiforma-Thin-Light');
   }
 
   static TextStyle regularLightTextWithColorAnd18FontSize(Color color) {
@@ -263,7 +263,7 @@ class AppStyles {
         color: color,
         fontSize: _sizeWith18Pixels,
         fontWeight: FontWeight.w400,
-        fontFamily: 'Axiforma-Light');
+        fontFamily: 'Axiforma-Thin-Light');
   }
 
   // ----------------   LARGE SIZE FONT ---------------------------//
@@ -274,7 +274,7 @@ class AppStyles {
         color: color,
         fontSize: _largeFontSize,
         fontWeight: FontWeight.normal,
-        fontFamily: 'Axiforma-Regular');
+        fontFamily: 'Axiforma-Thin-Regular');
   }
 
   static TextStyle largeBoldTextWithColor(Color color) {
@@ -283,7 +283,7 @@ class AppStyles {
         fontSize: _largeFontSize,
         fontWeight: FontWeight.bold,
         overflow: TextOverflow.ellipsis,
-        fontFamily: 'Axiforma');
+        fontFamily: 'Axiforma-Thin');
   }
 
   static TextStyle largeLightTextWithColor(Color color) {
@@ -291,7 +291,7 @@ class AppStyles {
         color: color,
         fontSize: _largeFontSize,
         fontWeight: FontWeight.normal,
-        fontFamily: 'Axiforma-Light');
+        fontFamily: 'Axiforma-Thin-Light');
   }
 
   static TextStyle firstlargeBoldTextWithColor(Color color) {
@@ -299,7 +299,7 @@ class AppStyles {
         color: color,
         fontSize: _firstLargeFontSize,
         fontWeight: FontWeight.bold,
-        fontFamily: 'Axiforma-Bold');
+        fontFamily: 'Axiforma-Thin-Bold');
   }
   // ----------------  EXTRA LARGE SIZE FONT ---------------------------//
 
@@ -309,7 +309,7 @@ class AppStyles {
         color: color,
         fontSize: _extraLargeFontSize,
         fontWeight: FontWeight.normal,
-        fontFamily: 'Axiforma-Regular');
+        fontFamily: 'Axiforma-Thin-Regular');
   }
 
   static TextStyle extraLargeBoldTextWithColor(Color color) {
@@ -317,7 +317,7 @@ class AppStyles {
         color: color,
         fontSize: _extraLargeFontSize,
         fontWeight: FontWeight.bold,
-        fontFamily: 'Axiforma-Bold');
+        fontFamily: 'Axiforma-Thin-Bold');
   }
 
   static TextStyle extraLargeLightTextWithColor(Color color) {
@@ -325,7 +325,7 @@ class AppStyles {
         color: color,
         fontSize: _extraLargeFontSize,
         fontWeight: FontWeight.normal,
-        fontFamily: 'Axiforma-Light');
+        fontFamily: 'Axiforma-Thin-Light');
   }
 
   static TextStyle extraLargefortyBoldTextWithColor(Color color) {
@@ -333,7 +333,7 @@ class AppStyles {
         color: color,
         fontSize: _extraLargeFontSizeforty,
         fontWeight: FontWeight.bold,
-        fontFamily: 'Axiforma-Bold');
+        fontFamily: 'Axiforma-Thin-Bold');
   }
 
   // ----------------  15 pixel SIZE FONT ---------------------------//
@@ -343,7 +343,7 @@ class AppStyles {
         color: color,
         fontSize: _sizeWith15Pixels,
         fontWeight: FontWeight.normal,
-        fontFamily: 'Axiforma',
+        fontFamily: 'Axiforma-Thin',
         overflow: textOverflow);
   }
 
