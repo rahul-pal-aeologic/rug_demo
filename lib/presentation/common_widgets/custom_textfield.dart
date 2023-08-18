@@ -38,6 +38,8 @@ class CustomTextField extends StatelessWidget {
   final Widget? prefixIcon;
   final double? height;
   final int? maxLength;
+  final Color? boxColor;
+
   List<TextInputFormatter>? inputFormatters;
 
   CustomTextField({
@@ -71,6 +73,7 @@ class CustomTextField extends StatelessWidget {
     this.enabled = true,
     this.hintColor,
     this.height,
+    this.boxColor = AppColors.mainBackgroundColor,
   });
 
   @override
@@ -105,11 +108,12 @@ class CustomTextField extends StatelessWidget {
               )
             : const SizedBox.shrink(),
         Container(
+          height: height,
           width: MediaQuery.of(context).size.width * 0.9,
           decoration: BoxDecoration(
-            color: AppColors.mainBackgroundColor,
+            color: boxColor,
             borderRadius: BorderRadius.circular(14),
-            border: Border.all(color: Colors.grey, width: 0),
+            border: Border.all(color: Colors.grey, width: 1),
           ),
           child: Padding(
             padding: const EdgeInsets.all(8),
@@ -148,11 +152,17 @@ class CustomTextField extends StatelessWidget {
                         controller: textFieldController,
                         obscureText: isObscure,
                         focusNode: currentFocusNode,
-                        style: AppStyles.regularTextWithColor(
-                            color: AppColors.textColor1,
-                            textOverflow: TextOverflow.ellipsis),
+
+                        style: TextStyle(fontSize: 28),
+
+                        // style: AppStyles.regularTextWithColor(
+                        //     color: AppColors.textColor1,
+                        //     textOverflow: TextOverflow.ellipsis),
                         decoration: InputDecoration(
-                          hintText: hintText,
+                          // hintText: hintText,
+                          labelText: hintText,
+                          labelStyle: AppStyles.headerStyleMonst,
+
                           // suffix: Padding(
                           //   padding: EdgeInsets.only(left: 10, right: 10),
                           //   child: suffixIcon ??
