@@ -113,7 +113,7 @@ class CustomTextField extends StatelessWidget {
           decoration: BoxDecoration(
             color: boxColor,
             borderRadius: BorderRadius.circular(14),
-            border: Border.all(color: Colors.grey, width: 1),
+            border: Border.all(color: Colors.grey, width: 2),
           ),
           child: Padding(
             padding: const EdgeInsets.all(8),
@@ -162,7 +162,7 @@ class CustomTextField extends StatelessWidget {
                           contentPadding: EdgeInsets.only(left: 20),
                           // hintText: hintText,
                           labelText: hintText,
-                          labelStyle: AppStyles.headerStyleMonst,
+                          labelStyle: AppStyles.headerStyle,
 
                           // suffix: Padding(
                           //   padding: EdgeInsets.only(left: 10, right: 10),
