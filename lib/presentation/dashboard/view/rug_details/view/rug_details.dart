@@ -246,13 +246,12 @@ class _AddToCartButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final indianRupeesFormat = NumberFormat.currency(
-           name: "INR",
-           locale: 'en_IN',
-           decimalDigits: 0, 
-           symbol: '₹ ',
-        );
+      name: "INR",
+      locale: 'en_IN',
+      decimalDigits: 0,
+      symbol: '₹ ',
+    );
     var formattedPrice = indianRupeesFormat.format(price);
 
     return ClipRRect(

@@ -1,4 +1,3 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -57,7 +56,15 @@ class _DesignRugState extends State<DesignRug> {
                 style: AppStyles.normalBoldTextWithColor(Colors.black),
               ),
               normalSpacer,
-               MaterialSelector(images: [staticRugs[9].image,staticRugs[1].image,staticRugs[0].image,staticRugs[6].image, ], onSelect: (v){},),
+              MaterialSelector(
+                images: [
+                  staticRugs[9].image,
+                  staticRugs[1].image,
+                  staticRugs[0].image,
+                  staticRugs[6].image,
+                ],
+                onSelect: (v) {},
+              ),
               normalSpacer,
               const _PriceContainer(price: 9499),
               normalSpacer,
@@ -276,11 +283,11 @@ class _PriceContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final indianRupeesFormat = NumberFormat.currency(
-           name: "INR",
-           locale: 'en_IN',
-           decimalDigits: 0, 
-           symbol: '₹ ',
-        );
+      name: "INR",
+      locale: 'en_IN',
+      decimalDigits: 0,
+      symbol: '₹ ',
+    );
     var formattedPrice = indianRupeesFormat.format(price);
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 25),

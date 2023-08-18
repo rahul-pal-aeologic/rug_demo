@@ -55,16 +55,17 @@ class _MaterialSelectorState extends State<MaterialSelector> {
                       ),
                       (selected == widget.images[i])
                           ? Container(
-                            margin: EdgeInsets.all(1),
-                            
-                            decoration: BoxDecoration(
-                            color: Colors.black38,borderRadius: BorderRadius.circular(12)),
-                            padding: EdgeInsets.all(20),
-                            width: 72,height: 72,
+                              margin: const EdgeInsets.all(1),
+                              decoration: BoxDecoration(
+                                  color: Colors.black38,
+                                  borderRadius: BorderRadius.circular(12)),
+                              padding: const EdgeInsets.all(20),
+                              width: 72,
+                              height: 72,
                               child: SvgPicture.asset(
-                              AppAssets.tick,
-                            ))
-                          : SizedBox()
+                                AppAssets.tick,
+                              ))
+                          : const SizedBox()
                     ],
                   ),
                   const Text('Sample')
