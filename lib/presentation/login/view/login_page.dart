@@ -107,6 +107,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   textFieldController: _passCon,
                   valueDidChange: (_) {},
                   onFocusChange: (_) {},
+                  suffixIcon: const Icon(
+                    Icons.visibility_off,
+                    size: 30,
+                    color: AppColors.greyColor,
+                  ),
                 ),
 
                 // Container(
