@@ -15,7 +15,7 @@ final GoRouter router = GoRouter(
     GoRoute(
       name: OnboardingScreen.routeName,
       path: OnboardingScreen.routeName,
-      builder: (context, state) => const FilterScreen(),
+      builder: (context, state) => const OnboardingScreen(),
     ),
     GoRoute(
       name: SplashScreen.routeName,

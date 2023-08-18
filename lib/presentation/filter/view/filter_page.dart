@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rug_demo/global/resource/app_colors.dart';
+import 'package:rug_demo/presentation/common_widgets/primary_button.dart';
 
 class FilterScreen extends StatefulWidget {
   static const String routeName = '/filter';
@@ -61,8 +62,11 @@ class _FilterScreenState extends State<FilterScreen> {
                               fontSize: 16,
                               fontWeight: FontWeight.w800),
                         ),
+                        SizedBox(
+                          width: 42,
+                        ),
                         Text(
-                          "           3",
+                          "3",
                           textAlign: TextAlign.start,
                           style: TextStyle(
                               color: AppColors.blackColor,
@@ -81,11 +85,14 @@ class _FilterScreenState extends State<FilterScreen> {
                         height: 742,
                         child: const Column(
                           children: [
-                            Row(
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.all(15.0),
-                                  child: Text(
+                            Padding(
+                              padding: EdgeInsets.only(
+                                  left: 15, right: 12, top: 18, bottom: 20),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
                                     "CATEGORIES",
                                     textAlign: TextAlign.start,
                                     style: TextStyle(
@@ -93,22 +100,25 @@ class _FilterScreenState extends State<FilterScreen> {
                                         fontSize: 16,
                                         fontWeight: FontWeight.w800),
                                   ),
-                                ),
-                                Text(
-                                  "      4",
-                                  textAlign: TextAlign.start,
-                                  style: TextStyle(
-                                      color: AppColors.greyColor,
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w800),
-                                ),
-                              ],
+                                  Text(
+                                    "4",
+                                    textAlign: TextAlign.start,
+                                    style: TextStyle(
+                                        color: AppColors.greyColor,
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w800),
+                                  ),
+                                ],
+                              ),
                             ),
-                            Row(
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.all(15.0),
-                                  child: Text(
+                            Padding(
+                              padding:
+                                  EdgeInsets.only(left: 15, right: 12, top: 8),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
                                     "COLOR",
                                     textAlign: TextAlign.start,
                                     style: TextStyle(
@@ -116,16 +126,16 @@ class _FilterScreenState extends State<FilterScreen> {
                                         fontSize: 16,
                                         fontWeight: FontWeight.w800),
                                   ),
-                                ),
-                                Text(
-                                  "                 2",
-                                  textAlign: TextAlign.start,
-                                  style: TextStyle(
-                                      color: AppColors.greyColor,
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w800),
-                                ),
-                              ],
+                                  Text(
+                                    "2",
+                                    textAlign: TextAlign.start,
+                                    style: TextStyle(
+                                        color: AppColors.greyColor,
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w800),
+                                  ),
+                                ],
+                              ),
                             ),
                           ],
                         ),
@@ -160,6 +170,21 @@ class _FilterScreenState extends State<FilterScreen> {
                   _listItem(
                     "assets/greycircle.png",
                     "Make Gardon",
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 420, left: 30),
+                    child: SizedBox(
+                      width: 180,
+                      height: 60,
+                      child: PrimaryButton(
+                        label: "",
+                        label2: "Apply Filter",
+                        onPressed: () {
+                          Navigator.of(context);
+                        },
+                        color: AppColors.primaryColor,
+                      ),
+                    ),
                   ),
                 ],
               )
