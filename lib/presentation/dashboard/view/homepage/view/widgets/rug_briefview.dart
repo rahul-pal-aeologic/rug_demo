@@ -62,7 +62,7 @@ class RugBriefViewWidget extends StatelessWidget {
                 Flexible(
                   child: Padding(
                     padding:
-                        const EdgeInsets.only(left: 8.0, right: 8, bottom: 8),
+                        const EdgeInsets.only(left: 8.0, right: 8, bottom: 1),
                     child: Row(
                       // mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,

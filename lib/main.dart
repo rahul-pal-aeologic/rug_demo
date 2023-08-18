@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
               title: AppStrings.appName,
               routerConfig: router,
               theme: ThemeData(
-                fontFamily: 'Axiforma-Thin',
+                fontFamily: 'Axiforma-Regular',
                 primaryColor: AppColors.primaryColor,
                 appBarTheme: const AppBarTheme(
                   backgroundColor: Colors.white,
