@@ -3,9 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:rug_demo/global/resource/app_colors.dart';
 import 'package:rug_demo/global/resource/app_dimensions.dart';
 import 'package:rug_demo/presentation/dashboard/view/dashboard_screen.dart';
-import 'package:rug_demo/presentation/homepage/view/homepage.dart';
-import 'package:rug_demo/presentation/homepage/view/widgets/rug_briefview.dart';
-import 'package:rug_demo/presentation/splash/widgets/logo.dart';
+import 'package:rug_demo/presentation/dashboard/view/homepage/view/widgets/rug_briefview.dart';
 
 class SplashScreen extends StatefulWidget {
   static const String routeName = '/splash';
@@ -36,12 +34,13 @@ class _SplashScreenState extends State<SplashScreen> {
         },
         child: SafeArea(
           child: Padding(
-            padding: EdgeInsets.symmetric(
+            padding: const EdgeInsets.symmetric(
               vertical: AppDimentions.px30,
               horizontal: AppDimentions.px20,
             ),
             child: Center(
                 child: RugBriefViewWidget(
+              image: '',
               name: 'name',
               price: 123,
               rating: 4.5,

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rug_demo/global/resource/app_colors.dart';
 import 'package:rug_demo/presentation/dashboard/cubit/bottom_navbar_cubit.dart';
-import 'package:rug_demo/presentation/homepage/view/homepage.dart';
+import 'package:rug_demo/presentation/dashboard/view/homepage/view/homepage.dart';
 
 class DashboardScreen extends StatefulWidget {
   static const String routeName = '/dashboardScreen';

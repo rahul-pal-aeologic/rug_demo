@@ -2,7 +2,6 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:rug_demo/global/resource/app_colors.dart';
 import 'package:rug_demo/global/resource/app_dimensions.dart';
 import 'package:rug_demo/global/resource/app_styles.dart';
 
@@ -23,6 +22,7 @@ class CustomScaffoldLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: showAppbar
           ? AppBar(
               leading: InkWell(
@@ -31,7 +31,7 @@ class CustomScaffoldLayout extends StatelessWidget {
                   context.pop();
                 },
               ),
-              centerTitle: true,
+              centerTitle: false,
               title: Text(
                 appbarTitle ?? '',
                 style: AppStyles.largeBoldTextWithColor(
@@ -50,9 +50,9 @@ class CustomScaffoldLayout extends StatelessWidget {
                 layoutMinHeight ?? AppDimentions.loginPageMinHeight,
                 constraints.maxHeight,
               ),
-              padding: const EdgeInsets.symmetric(
-                  horizontal: AppDimentions.px20, vertical: 20),
-              decoration: const BoxDecoration(color: AppColors.whiteColor),
+              // padding: const EdgeInsets.symmetric(
+              //     horizontal: AppDimentions.px20, vertical: 20),
+              decoration: const BoxDecoration(color: Colors.white),
               child: child),
         ),
       ),
