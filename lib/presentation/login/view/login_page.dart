@@ -111,7 +111,8 @@ class _LoginScreenState extends State<LoginScreen> {
                               fontWeight: FontWeight.w500),
                         ),
                         Icon(
-                          Icons.hide_image,
+                          Icons.visibility_off,
+                          size: 30,
                           color: AppColors.greyColor,
                         )
                       ],
