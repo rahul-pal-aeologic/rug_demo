@@ -76,7 +76,8 @@ class BottomNavigation extends StatelessWidget {
               width: AppDimentions.bottomNavbarIconDimension,
               height: AppDimentions.bottomNavbarIconDimension,
             ),
-            activeIcon: const Icon(Icons.favorite, color: AppColors.primaryColor),
+            activeIcon:
+                const Icon(Icons.favorite, color: AppColors.primaryColor),
             label: '',
           ),
 
@@ -110,7 +111,8 @@ class BottomNavigation extends StatelessWidget {
               width: AppDimentions.bottomNavbarIconDimension,
               height: AppDimentions.bottomNavbarIconDimension,
             ),
-            activeIcon: const Icon(Icons.settings, color: AppColors.primaryColor),
+            activeIcon:
+                const Icon(Icons.settings, color: AppColors.primaryColor),
             label: '',
           ),
         ],

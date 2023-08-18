@@ -8,4 +8,5 @@ class AppAssets {
   static const String categoryNavbar = 'assets/svgs/Iconly-Bold-Category.svg';
   static const String notification = 'assets/svgs/Iconly-Bold-Notification.svg';
   static const String setting = 'assets/svgs/Iconly-Bold-Setting.svg';
+  static const String tick = 'assets/svgs/tick.svg';
 }

@@ -1,8 +1,8 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:intl/intl.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:rug_demo/global/resource/app_assets.dart';
 import 'package:rug_demo/global/resource/app_colors.dart';
@@ -13,6 +13,7 @@ import 'package:rug_demo/models/rug/shape_model.dart';
 import 'package:rug_demo/presentation/common_widgets/custom_scaffold_layout.dart';
 import 'package:rug_demo/presentation/common_widgets/primary_button.dart';
 import 'package:rug_demo/presentation/common_widgets/secondary_button.dart';
+import 'package:rug_demo/presentation/design_rug/view/widgets/material_selector.dart';
 import 'package:rug_demo/presentation/design_rug/view/widgets/shape_selector.dart';
 
 class DesignRug extends StatefulWidget {
@@ -31,53 +32,63 @@ class _DesignRugState extends State<DesignRug> {
       appbarTitle: 'Design your Own Rug',
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Step 1: Upload your Digital Art',
-              style: AppStyles.normalBoldTextWithColor(Colors.black),
-            ),
-            minimumSpacer,
-            const _UploadPicture(),
-            minimumSpacer,
-            Text(
-              'Select Rug Shape',
-              style: AppStyles.normalBoldTextWithColor(Colors.black),
-            ),
-            ShapeSelector(list: shapesForRugs, onSelect: (v) {}),
-            minimumSpacer,
-            const _SizeSelector(),
-            minimumSpacer,
-            Text(
-              'Select Rug Material',
-              style: AppStyles.normalBoldTextWithColor(Colors.black),
-            ),
-            minimumSpacer,
-            const _MaterialSelector(),
-            minimumSpacer,
-            const _PriceContainer(price: 9499),
-            minimumSpacer,
-            Row(
-              children: [
-                Flexible(
-                  child: SecondaryButton(
-                    label: 'Preview Design',
-                    onPressed: () {},
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Step 1: Upload your Digital Art',
+                style: AppStyles.normalBoldTextWithColor(Colors.black),
+              ),
+              normalSpacer,
+              const _UploadPicture(),
+              normalSpacer,
+              Text(
+                'Select Rug Shape',
+                style: AppStyles.normalBoldTextWithColor(Colors.black),
+              ),
+              ShapeSelector(list: shapesForRugs, onSelect: (v) {}),
+              normalSpacer,
+              const _SizeSelector(),
+              normalSpacer,
+              Text(
+                'Select Rug Material',
+                style: AppStyles.normalBoldTextWithColor(Colors.black),
+              ),
+              normalSpacer,
+              MaterialSelector(
+                images: [
+                  staticRugs[9].image,
+                  staticRugs[1].image,
+                  staticRugs[0].image,
+                  staticRugs[6].image,
+                ],
+                onSelect: (v) {},
+              ),
+              normalSpacer,
+              const _PriceContainer(price: 9499),
+              normalSpacer,
+              Row(
+                children: [
+                  Flexible(
+                    child: SecondaryButton(
+                      label: 'Preview Design',
+                      onPressed: () {},
+                    ),
                   ),
-                ),
-                minimumSpacer,
-                Flexible(
-                    child: PrimaryButton(
-                  label2: 'Add to cart',
-                  label: '',
-                  color: AppColors.primaryColor,
-                  onPressed: () {},
-                  height: 56,
-                ))
-              ],
-            )
-          ],
+                  normalSpacer,
+                  Flexible(
+                      child: PrimaryButton(
+                    label2: 'Add to cart',
+                    label: '',
+                    color: AppColors.primaryColor,
+                    onPressed: () {},
+                    height: 56,
+                  ))
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );
@@ -95,7 +106,8 @@ class _UploadPictureState extends State<_UploadPicture> {
   XFile? image;
 
   void _checkPermission(BuildContext context) async {
-    FocusScope.of(context).requestFocus(FocusNode());
+    print("object");
+    // FocusScope.of(context).requestFocus(FocusNode());
     Map<Permission, PermissionStatus> statues = await [
       Permission.camera,
       Permission.storage,
@@ -150,7 +162,7 @@ class _UploadPictureState extends State<_UploadPicture> {
                 height: 40,
                 width: 100,
               ),
-              minimumSpacer,
+              normalSpacer,
               Text(
                 'Step 1: Upload your Digital Art',
                 style: AppStyles.normalBoldTextWithColor(Colors.black),
@@ -164,7 +176,7 @@ class _UploadPictureState extends State<_UploadPicture> {
             label2: 'Choose file',
             label: '',
             onPressed: () async {
-              _checkPermission;
+              _checkPermission(context);
             },
             color: AppColors.primaryColor,
             height: 50,
@@ -191,14 +203,15 @@ class _SizeSelector extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             const Flexible(
-                flex: 10,
-                child: Text(
-                  'Select Rug Size',
-                  style: TextStyle(
-                      color: Colors.grey,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
-                )),
+              flex: 10,
+              child: Text(
+                'Select Rug Size',
+                style: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
             const SizedBox(
               width: 50,
             ),
@@ -227,43 +240,41 @@ class _SizeSelector extends StatelessWidget {
   }
 }
 
-class _MaterialSelector extends StatefulWidget {
-  const _MaterialSelector();
-
-  @override
-  State<_MaterialSelector> createState() => __MaterialSelectorState();
-}
-
-class __MaterialSelectorState extends State<_MaterialSelector> {
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Row(
-          children: [
-            for (int i = 0; i < 4; i++)
-              Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(2.0),
-                    child: ClipRRect(
-                        borderRadius: BorderRadius.circular(12),
-                        child: CachedNetworkImage(
-                          fit: BoxFit.fitHeight,
-                          imageUrl: staticRugs[i].image,
-                          height: 70,
-                          width: 70,
-                        )),
-                  ),
-                  const Text('Sample')
-                ],
-              )
-          ],
-        )
-      ],
-    );
-  }
-}
+// class _MaterialSelector extends StatefulWidget {
+//   const _MaterialSelector();
+//   @override
+//   State<_MaterialSelector> createState() => __MaterialSelectorState();
+// }
+// class __MaterialSelectorState extends State<_MaterialSelector> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Column(
+//       children: [
+//         Row(
+//           children: [
+//             for (int i = 0; i < 4; i++)
+//               Column(
+//                 children: [
+//                   Padding(
+//                     padding: const EdgeInsets.all(2.0),
+//                     child: ClipRRect(
+//                         borderRadius: BorderRadius.circular(12),
+//                         child: CachedNetworkImage(
+//                           fit: BoxFit.fitHeight,
+//                           imageUrl: staticRugs[i].image,
+//                           height: 70,
+//                           width: 70,
+//                         )),
+//                   ),
+//                   const Text('Sample')
+//                 ],
+//               )
+//           ],
+//         )
+//       ],
+//     );
+//   }
+// }
 
 class _PriceContainer extends StatelessWidget {
   final double price;
@@ -271,6 +282,13 @@ class _PriceContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final indianRupeesFormat = NumberFormat.currency(
+      name: "INR",
+      locale: 'en_IN',
+      decimalDigits: 0,
+      symbol: '₹ ',
+    );
+    var formattedPrice = indianRupeesFormat.format(price);
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 25),
       decoration: BoxDecoration(
@@ -283,11 +301,11 @@ class _PriceContainer extends StatelessWidget {
         ),
         Text.rich(
           TextSpan(
-            text: 'Rs ',
+            text: '',
             style: const TextStyle(color: AppColors.primaryColor),
             children: <InlineSpan>[
               TextSpan(
-                text: price.toString(),
+                text: formattedPrice,
                 style: const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,

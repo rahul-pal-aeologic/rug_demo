@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:intl/intl.dart';
 import 'package:rug_demo/global/resource/app_colors.dart';
 import 'package:rug_demo/global/resource/app_dimensions.dart';
 import 'package:rug_demo/global/resource/app_styles.dart';
@@ -245,6 +246,14 @@ class _AddToCartButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final indianRupeesFormat = NumberFormat.currency(
+      name: "INR",
+      locale: 'en_IN',
+      decimalDigits: 0,
+      symbol: '₹ ',
+    );
+    var formattedPrice = indianRupeesFormat.format(price);
+
     return ClipRRect(
       borderRadius: BorderRadius.circular(16),
       child: ElevatedButton(
@@ -284,11 +293,11 @@ class _AddToCartButton extends StatelessWidget {
                 ),
                 Text.rich(
                   TextSpan(
-                    text: 'Rs ',
+                    text: '',
                     style: const TextStyle(color: AppColors.whiteColor),
                     children: <InlineSpan>[
                       TextSpan(
-                        text: price.toString(),
+                        text: formattedPrice.toString(),
                         style: const TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
