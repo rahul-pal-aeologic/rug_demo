@@ -120,7 +120,7 @@ class CustomTextField extends StatelessWidget {
             border: Border.all(color: Colors.grey, width: 2),
           ),
           child: Padding(
-            padding: const EdgeInsets.only(top:8, left: 8, bottom: 8),
+            padding: const EdgeInsets.only(top: 8, left: 8, bottom: 8),
             child: FocusScope(
               child: Focus(
                 onFocusChange: (focus) {
@@ -185,7 +185,7 @@ class CustomTextField extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 10, right: 0),
+                      padding: const EdgeInsets.only(left: 10, right: 15),
                       child: InkWell(
                         onTap: (disable ?? false) ? null : onPressed,
                         child: suffixIcon ??

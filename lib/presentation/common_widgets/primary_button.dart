@@ -59,6 +59,7 @@ class PrimaryButton extends StatelessWidget {
                         label,
                         style: TextStyle(
                             fontWeight: FontWeight.w500,
+                            fontFamily: 'Axiforma-Regular',
                             color: textColor1,
                             fontSize: 16),
                       ),

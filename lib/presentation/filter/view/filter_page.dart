@@ -24,7 +24,9 @@ class _FilterScreenState extends State<FilterScreen> {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 35),
+              padding: const EdgeInsets.only(
+                top: 35,
+              ),
               child: Row(
                 children: [
                   IconButton(
@@ -161,7 +163,7 @@ class _FilterScreenState extends State<FilterScreen> {
                           print(value?.filterName);
                         }),
                     Padding(
-                      padding: const EdgeInsets.only(top: 420, left: 30),
+                      padding: const EdgeInsets.only(top: 390, left: 30),
                       child: SizedBox(
                         width: 180,
                         height: 60,

@@ -32,7 +32,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 child: Image.asset("assets/carpet.jpg"),
               ),
               const Padding(
-                padding: EdgeInsets.only(top: 60, bottom: 10),
+                padding: EdgeInsets.only(top: 50, bottom: 10),
                 child: Text(
                   "Personal Rug",
                   style: TextStyle(
@@ -56,7 +56,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     fontWeight: FontWeight.w900),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 35, bottom: 10),
+                padding: const EdgeInsets.only(top: 20, bottom: 10),
                 child: PrimaryButton(
                   label: "I'm already a member.",
                   label2: "Login",
