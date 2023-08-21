@@ -4,7 +4,7 @@ class AppColors {
   static const Color mainBackgroundColor = Colors.white;
   static const Color textColorBlack = Color(0xFF192733);
   static const Color whiteShade1 = Color(0xFFDDDDDE);
-  static const Color primaryColor = Color.fromRGBO(2, 179, 155, 1);
+  static const Color primaryColor = Color.fromRGBO(5, 163, 155, 1);
   // static const Color primaryColor = Color(0xFF15ACA7);
   static const Color loginBtnColor = Color(0xFF9B9284);
   static const Color textFormColor = Color(0xFF9EA8B1);
@@ -32,7 +32,7 @@ class AppColors {
   static const Color backgroundColor = Colors.white;
 
   static const Color unselectedItemColor = Color(0xFF85919B);
-  static const Color selectedItemColor = Color.fromARGB(255, 25, 51, 50);
+  static const Color selectedItemColor = Color.fromARGB(255, 35, 68, 82);
 
   static const Color titleColor = Color(0xFF445769);
   static const Color backIconColor = Color(0xFF7A8792);

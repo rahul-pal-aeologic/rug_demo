@@ -46,10 +46,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     Text(
                       "Personal Rug",
                       style: TextStyle(
-                          color: AppColors.primaryColor,
-                          fontSize: 26,
-                          fontFamily: "Axiforma-ExtraBold",
-                          fontWeight: FontWeight.bold),
+                        color: AppColors.primaryColor,
+                        fontSize: 26,
+                        fontFamily: "Axiforma-ExtraBold",
+                      ),
                     ),
                     Text(
                       "Get ideas, Offers in",
@@ -57,7 +57,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         color: AppColors.blackColor,
                         fontSize: 32,
                         fontFamily: "Axiforma-Medium",
-                        fontWeight: FontWeight.w600,
                       ),
                     ),
                     Text(
