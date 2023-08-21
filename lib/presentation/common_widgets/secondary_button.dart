@@ -21,7 +21,7 @@ class SecondaryButton extends StatelessWidget {
   @override
   Widget build(context) {
     return SizedBox(
-      height: height ?? 80,
+      height: height ?? 73,
       width: width,
       child: ElevatedButton(
           style: ElevatedButton.styleFrom(
@@ -29,7 +29,7 @@ class SecondaryButton extends StatelessWidget {
             backgroundColor: AppColors.mainBackgroundColor,
             shape: RoundedRectangleBorder(
               side: const BorderSide(color: AppColors.greyColor, width: 2.5),
-              borderRadius: BorderRadius.circular(14),
+              borderRadius: BorderRadius.circular(18),
             ),
           ),
           onPressed: (disable ?? false) ? null : onPressed,
@@ -39,10 +39,11 @@ class SecondaryButton extends StatelessWidget {
               Text(
                 label,
                 style: const TextStyle(
-                    fontWeight: FontWeight.w500,
-                    fontFamily: 'Axiforma-Regular',
-                    color: Colors.black,
-                    fontSize: 16),
+                  fontWeight: FontWeight.w500,
+                  fontFamily: 'Axiforma-bold',
+                  color: Colors.black,
+                  fontSize: 14,
+                ),
                 // style: AppStyles.mediumBoldTextWithColor(
                 //   ellipsis: TextOverflow.ellipsis,
                 // color: (disable ?? false)

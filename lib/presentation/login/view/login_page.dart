@@ -55,9 +55,11 @@ class _LoginScreenState extends State<LoginScreen> {
                     "Sign In to continue",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                        color: AppColors.blackColor,
-                        fontSize: 35,
-                        fontWeight: FontWeight.w500),
+                      color: AppColors.blackColor,
+                      fontSize: 32,
+                      fontFamily: "Axiforma-medium",
+                      // fontWeight: FontWeight.w700,
+                    ),
                   ),
                 ),
                 // Container(
@@ -93,9 +95,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 //   ),
                 // ),
                 CustomTextField(
-                  height: 70,
+                  height: 75,
                   hintText: "Email",
-                  boxColor: Colors.grey[300],
+                  boxColor: Colors.grey[200],
                   textFieldController: _emailCon,
                   valueDidChange: (_) {},
                   onFocusChange: (_) {},
@@ -104,9 +106,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: 10,
                 ),
                 CustomTextField(
-                  height: 70,
+                  height: 75,
                   hintText: "Password",
-                  boxColor: Colors.grey[300],
+                  boxColor: Colors.grey[200],
                   textFieldController: _passCon,
                   valueDidChange: (_) {},
                   onFocusChange: (_) {},
@@ -116,7 +118,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   },
                   suffixIcon: Icon(
                     (_isHidden ? Icons.visibility : Icons.visibility_off),
-                    size: 30,
+                    size: 25,
                     color: AppColors.greyColor,
                   ),
                 ),
@@ -158,7 +160,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         color: AppColors.blackColor,
-                        fontSize: 15,
+                        fontSize: 13,
+                        fontFamily: "Axiforma-ExtraBold",
                         fontWeight: FontWeight.w800),
                   ),
                 ),
