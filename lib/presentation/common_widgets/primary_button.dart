@@ -31,7 +31,7 @@ class PrimaryButton extends StatelessWidget {
   @override
   Widget build(context) {
     return SizedBox(
-      height: height ?? 76,
+      height: height ?? 73,
       width: width,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
@@ -61,14 +61,15 @@ class PrimaryButton extends StatelessWidget {
                             fontWeight: FontWeight.w500,
                             fontFamily: 'Axiforma-Regular',
                             color: textColor1,
-                            fontSize: 16),
+                            fontSize: 14),
                       ),
                       Text(
                         label2,
                         style: TextStyle(
                             fontWeight: FontWeight.w600,
                             color: textColor2,
-                            fontSize: 17),
+                            fontFamily: "Axiforma-SemiBold",
+                            fontSize: 14),
                       ),
                     ],
                   ),

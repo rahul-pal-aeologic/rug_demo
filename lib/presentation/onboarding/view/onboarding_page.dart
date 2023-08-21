@@ -26,41 +26,57 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
             children: [
               ClipRRect(
                 borderRadius: const BorderRadius.only(
                     bottomLeft: Radius.circular(25),
                     bottomRight: Radius.circular(25)),
-                child: Image.asset("assets/carpet.jpg"),
-              ),
-              const Padding(
-                padding: EdgeInsets.only(top: 40, bottom: 0),
-                child: Text(
-                  "Personal Rug",
-                  style: TextStyle(
-                      color: AppColors.primaryColor,
-                      fontSize: 27,
-                      fontWeight: FontWeight.w800),
+                child: Image.asset(
+                  "assets/carpet.jpg",
+                  fit: BoxFit.fill,
                 ),
               ),
-              const Text(
-                "Get ideas, Offers in",
-                style: TextStyle(
-                    color: AppColors.blackColor,
-                    fontSize: 35,
-                    fontWeight: FontWeight.w500),
+              const Padding(
+                padding: EdgeInsets.only(top: 50, bottom: 0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      "Personal Rug",
+                      style: TextStyle(
+                          color: AppColors.primaryColor,
+                          fontSize: 26,
+                          fontFamily: "Axiforma-ExtraBold",
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      "Get ideas, Offers in",
+                      style: TextStyle(
+                        color: AppColors.blackColor,
+                        fontSize: 32,
+                        fontFamily: "Axiforma-Medium",
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    Text(
+                      "Your Inbox",
+                      style: TextStyle(
+                        color: AppColors.blackColor,
+                        fontSize: 32,
+                        fontFamily: "Axiforma-Heavy",
+                        // fontWeight: FontWeight.w900,
+                      ),
+                    ),
+                  ],
+                ),
               ),
-              const Text(
-                "Your Inbox",
-                style: TextStyle(
-                    color: AppColors.blackColor,
-                    fontSize: 35,
-                    fontWeight: FontWeight.w900),
-              ),
+
               Padding(
-                padding: const EdgeInsets.only(top: 10, bottom: 10),
+                padding: const EdgeInsets.only(top: 30, bottom: 7),
                 child: PrimaryButton(
-                  label: "I'm already a member.",
+                  label: "I'm already a member. ",
                   label2: "Login",
                   onPressed: () {
                     // Navigator.push(
@@ -75,10 +91,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 5, bottom: 15),
+                padding: const EdgeInsets.only(top: 5, bottom: 12),
                 child: PrimaryButton(
-                  label: "I'm new user.",
-                  textColor1: Colors.grey[400],
+                  label: "I'm new user. ",
+                  textColor1: Colors.grey[500],
                   label2: "Signup",
                   onPressed: () {
                     // Navigator.push(

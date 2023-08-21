@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rug_demo/global/resource/app_colors.dart';
 import 'package:rug_demo/presentation/common_widgets/custom_scaffold_layout.dart';
 import 'package:rug_demo/presentation/common_widgets/custom_textfield.dart';
+import 'package:rug_demo/presentation/common_widgets/custom_textfieldnew.dart';
 import 'package:rug_demo/presentation/common_widgets/primary_button.dart';
 import 'package:rug_demo/presentation/login/view/login_page.dart';
 
@@ -41,18 +42,20 @@ class _SignupScreenState extends State<SignupScreen> {
                     "Create New,",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                        color: AppColors.blackColor,
-                        fontSize: 30,
-                        fontWeight: FontWeight.w800),
+                      color: AppColors.blackColor,
+                      fontFamily: "Axiforma-extraBold",
+                      fontSize: 28,
+                    ),
                   ),
                 ),
                 const Text(
                   "Sign up to get started!",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      color: AppColors.greyShade1,
-                      fontSize: 25,
-                      fontWeight: FontWeight.w500),
+                    color: AppColors.greyShade1,
+                    fontSize: 23,
+                    fontFamily: "Axiforma-medium",
+                  ),
                 ),
                 const SizedBox(
                   height: 40,
@@ -76,8 +79,8 @@ class _SignupScreenState extends State<SignupScreen> {
                 //     ),
                 //   ),
                 // ),
-                CustomTextField(
-                  height: 70,
+                CustomTextFieldNew(
+                  height: 75,
                   hintText: "Name",
                   boxColor: Colors.grey[300],
                   textFieldController: _nameCon,
@@ -87,8 +90,8 @@ class _SignupScreenState extends State<SignupScreen> {
                 const SizedBox(
                   height: 15,
                 ),
-                CustomTextField(
-                  height: 70,
+                CustomTextFieldNew(
+                  height: 75,
                   hintText: "Email ID",
                   boxColor: Colors.grey[300],
                   textFieldController: _emailCon,
@@ -98,8 +101,8 @@ class _SignupScreenState extends State<SignupScreen> {
                 const SizedBox(
                   height: 15,
                 ),
-                CustomTextField(
-                  height: 70,
+                CustomTextFieldNew(
+                  height: 75,
                   hintText: "Mobile Number",
                   boxColor: Colors.grey[300],
                   textFieldController: _mobCon,
@@ -109,8 +112,8 @@ class _SignupScreenState extends State<SignupScreen> {
                 const SizedBox(
                   height: 15,
                 ),
-                CustomTextField(
-                  height: 70,
+                CustomTextFieldNew(
+                  height: 75,
                   hintText: "Password",
                   boxColor: Colors.grey[300],
                   textFieldController: _passCon,

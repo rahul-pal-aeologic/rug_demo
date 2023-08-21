@@ -34,7 +34,7 @@ class _FilteredRugsState extends State<FilteredRugs> {
                     'Clear Filter',
                     style: AppStyles.smallBoldTextWithUnderline(
                         AppColors.primaryColor,
-                        size: 20),
+                        size: 18),
                   ),
                 ),
               ),
