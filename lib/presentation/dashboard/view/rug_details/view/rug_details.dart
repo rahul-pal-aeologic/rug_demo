@@ -47,7 +47,7 @@ class _RugDetailsState extends State<RugDetails> {
                     Positioned(
                       bottom: 10,
                       child: PrimaryButton(
-                        // width: MediaQuery.of(context).size.width / 1.8,
+                        width: MediaQuery.of(context).size.width / 1.8,
                         height: 56,
                         label: "",
                         label2: "Design your Own Rug",

@@ -153,17 +153,23 @@ class _LoginScreenState extends State<LoginScreen> {
                 //     ),
                 //   ),
                 // ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 220, top: 10),
-                  child: Text(
-                    " Forgot Password ?",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        color: AppColors.blackColor,
-                        fontSize: 13,
-                        fontFamily: "Axiforma-ExtraBold",
-                        fontWeight: FontWeight.w800),
-                  ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Text(
+                        " Forgot Password ?",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: AppColors.blackColor,
+                            fontSize: 13,
+                            fontFamily: "Axiforma-ExtraBold",
+                            fontWeight: FontWeight.w800),
+                      ),
+                    ),
+                  ],
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 45, bottom: 10),
